@@ -1,0 +1,13 @@
+/Users/Tong/Documents/cluster/atat/executables/getvalue
+/Users/Tong/Documents/cluster/atat/executables/getlines
+/Users/Tong/Documents/cluster/atat/executables/nltoblank
+/Users/Tong/Documents/cluster/atat/executables/blanktonl
+/Users/Tong/Documents/cluster/atat/executables/foreachfile
+/Users/Tong/Documents/cluster/atat/executables/calc
+/Users/Tong/Documents/cluster/atat/executables/sspp
+/Users/Tong/Documents/cluster/atat/executables/chl
+/Users/Tong/Documents/cluster/atat/executables/minload
+/Users/Tong/Documents/cluster/atat/executables/node
+/Users/Tong/Documents/cluster/atat/executables/pollmach
+/Users/Tong/Documents/cluster/atat/executables/fixeol
+/Users/Tong/Documents/cluster/atat/executables/lookup

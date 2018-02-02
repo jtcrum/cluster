@@ -1,0 +1,4 @@
+/Users/Tong/Documents/cluster/atat/executables/cleanvasp
+/Users/Tong/Documents/cluster/atat/executables/extract_vasp
+/Users/Tong/Documents/cluster/atat/executables/checkerr_vasp
+/Users/Tong/Documents/cluster/atat/executables/robustrelax_vasp

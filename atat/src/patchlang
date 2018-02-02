@@ -1,0 +1,2 @@
+#!/bin/sh
+cat - | ./patchconst  |  ./patchfriend |  ./patchdoth |  ./patchstr2s |  ./patchtemplate |  ./patchstatic

@@ -1,0 +1,1163 @@
+strain=
+1.00000 0.00000 -0.00000 
+0.00000 1.00000 0.00000 
+0.00000 0.00000 1.00000 
+
+Si atom at 0.66697 0.10693 0.22823 mapped onto lattice site at 0.66697 0.10693 0.22823 distance= 0.00000
+Si atom at 0.43997 0.33303 0.22823 mapped onto lattice site at 0.43997 0.33303 0.22823 distance= 0.00000
+Si atom at 0.89307 0.33303 0.22823 mapped onto lattice site at 0.89307 0.33303 0.22823 distance= 0.00000
+Si atom at 0.99970 0.22640 0.10510 mapped onto lattice site at 0.99970 0.22640 0.10510 distance= 0.00000
+Si atom at 0.43997 0.10693 0.22823 mapped onto lattice site at 0.43997 0.10693 0.22823 distance= 0.00000
+Si atom at 0.22670 0.22640 0.10510 mapped onto lattice site at 0.22670 0.22640 0.10510 distance= 0.00000
+Si atom at 1.43997 0.33303 0.22823 mapped onto lattice site at 1.43997 0.33303 0.22823 distance= 0.00000
+Si atom at 1.89307 0.33303 0.22823 mapped onto lattice site at 1.89307 0.33303 0.22823 distance= 0.00000
+Si atom at 2.66697 0.10693 0.22823 mapped onto lattice site at 2.66697 0.10693 0.22823 distance= 0.00000
+Si atom at 2.43997 0.33303 0.22823 mapped onto lattice site at 2.43997 0.33303 0.22823 distance= 0.00000
+Si atom at 2.99970 0.22640 0.10510 mapped onto lattice site at 2.99970 0.22640 0.10510 distance= 0.00000
+Si atom at 2.43997 0.10693 0.22823 mapped onto lattice site at 2.43997 0.10693 0.22823 distance= 0.00000
+Si atom at 0.99970 1.22640 0.10510 mapped onto lattice site at 0.99970 1.22640 0.10510 distance= 0.00000
+Si atom at 2.22670 1.22640 0.10510 mapped onto lattice site at 2.22670 1.22640 0.10510 distance= 0.00000
+Si atom at 0.66697 2.10693 0.22823 mapped onto lattice site at 0.66697 2.10693 0.22823 distance= 0.00000
+Si atom at 2.43997 2.10693 0.22823 mapped onto lattice site at 2.43997 2.10693 0.22823 distance= 0.00000
+Si atom at 0.66637 0.10663 0.43843 mapped onto lattice site at 0.66637 0.10663 0.43843 distance= 0.00000
+Si atom at 0.33303 0.43997 0.77177 mapped onto lattice site at 0.33303 0.43997 0.77177 distance= 0.00000
+Si atom at 0.33363 0.44027 0.56157 mapped onto lattice site at 0.33363 0.44027 0.56157 distance= 0.00000
+Si atom at 0.33363 0.89337 0.56157 mapped onto lattice site at 0.33363 0.89337 0.56157 distance= 0.00000
+Si atom at 0.55973 0.66637 0.56157 mapped onto lattice site at 0.55973 0.66637 0.56157 distance= 0.00000
+Si atom at 0.66637 0.55973 0.43843 mapped onto lattice site at 0.66637 0.55973 0.43843 distance= 0.00000
+Si atom at 0.55973 0.89337 0.56157 mapped onto lattice site at 0.55973 0.89337 0.56157 distance= 0.00000
+Si atom at 0.10693 0.66697 0.77177 mapped onto lattice site at 0.10693 0.66697 0.77177 distance= 0.00000
+Si atom at 0.44027 0.10663 0.43843 mapped onto lattice site at 0.44027 0.10663 0.43843 distance= 0.00000
+Si atom at 0.10693 0.43997 0.77177 mapped onto lattice site at 0.10693 0.43997 0.77177 distance= 0.00000
+Si atom at 0.10663 0.66637 0.56157 mapped onto lattice site at 0.10663 0.66637 0.56157 distance= 0.00000
+Si atom at 0.10663 0.44027 0.56157 mapped onto lattice site at 0.10663 0.44027 0.56157 distance= 0.00000
+Si atom at 0.89337 0.33363 0.43843 mapped onto lattice site at 0.89337 0.33363 0.43843 distance= 0.00000
+Si atom at 0.56003 0.66697 0.77177 mapped onto lattice site at 0.56003 0.66697 0.77177 distance= 0.00000
+Si atom at 0.89337 0.55973 0.43843 mapped onto lattice site at 0.89337 0.55973 0.43843 distance= 0.00000
+Si atom at 1.66637 0.10663 0.43843 mapped onto lattice site at 1.66637 0.10663 0.43843 distance= 0.00000
+Si atom at 1.33363 0.44027 0.56157 mapped onto lattice site at 1.33363 0.44027 0.56157 distance= 0.00000
+Si atom at 1.33363 0.89337 0.56157 mapped onto lattice site at 1.33363 0.89337 0.56157 distance= 0.00000
+Si atom at 1.55973 0.66637 0.56157 mapped onto lattice site at 1.55973 0.66637 0.56157 distance= 0.00000
+Si atom at 1.55973 0.89337 0.56157 mapped onto lattice site at 1.55973 0.89337 0.56157 distance= 0.00000
+Si atom at 1.44027 0.33363 0.43843 mapped onto lattice site at 1.44027 0.33363 0.43843 distance= 0.00000
+Si atom at 1.44027 0.10663 0.43843 mapped onto lattice site at 1.44027 0.10663 0.43843 distance= 0.00000
+Si atom at 1.10693 0.43997 0.77177 mapped onto lattice site at 1.10693 0.43997 0.77177 distance= 0.00000
+Si atom at 1.10663 0.66637 0.56157 mapped onto lattice site at 1.10663 0.66637 0.56157 distance= 0.00000
+Si atom at 1.10663 0.44027 0.56157 mapped onto lattice site at 1.10663 0.44027 0.56157 distance= 0.00000
+Si atom at 1.89337 0.33363 0.43843 mapped onto lattice site at 1.89337 0.33363 0.43843 distance= 0.00000
+Si atom at 2.66637 0.10663 0.43843 mapped onto lattice site at 2.66637 0.10663 0.43843 distance= 0.00000
+Si atom at 2.55973 0.66637 0.56157 mapped onto lattice site at 2.55973 0.66637 0.56157 distance= 0.00000
+Si atom at 2.66637 0.55973 0.43843 mapped onto lattice site at 2.66637 0.55973 0.43843 distance= 0.00000
+Si atom at 2.55973 0.89337 0.56157 mapped onto lattice site at 2.55973 0.89337 0.56157 distance= 0.00000
+Si atom at 2.44027 0.10663 0.43843 mapped onto lattice site at 2.44027 0.10663 0.43843 distance= 0.00000
+Si atom at 2.10693 0.43997 0.77177 mapped onto lattice site at 2.10693 0.43997 0.77177 distance= 0.00000
+Si atom at 2.89337 0.55973 0.43843 mapped onto lattice site at 2.89337 0.55973 0.43843 distance= 0.00000
+Si atom at 0.33363 2.89337 0.56157 mapped onto lattice site at 0.33363 2.89337 0.56157 distance= 0.00000
+Si atom at 1.33363 2.89337 0.56157 mapped onto lattice site at 1.33363 2.89337 0.56157 distance= 0.00000
+Si atom at 3.00030 0.77360 0.89490 mapped onto lattice site at 3.00030 0.77360 0.89490 distance= 0.00000
+Si atom at 3.00030 0.22670 0.89490 mapped onto lattice site at 3.00030 0.22670 0.89490 distance= 0.00000
+Si atom at 0.22640 0.22670 0.89490 mapped onto lattice site at 0.22640 0.22670 0.89490 distance= 0.00000
+Si atom at 0.77330 0.77360 0.89490 mapped onto lattice site at 0.77330 0.77360 0.89490 distance= 0.00000
+Si atom at 1.00030 0.22670 0.89490 mapped onto lattice site at 1.00030 0.22670 0.89490 distance= 0.00000
+Si atom at 1.77330 0.77360 0.89490 mapped onto lattice site at 1.77330 0.77360 0.89490 distance= 0.00000
+Si atom at 2.00030 0.22670 0.89490 mapped onto lattice site at 2.00030 0.22670 0.89490 distance= 0.00000
+Si atom at 0.66697 0.56003 0.22823 mapped onto lattice site at 0.66697 0.56003 0.22823 distance= 0.00000
+Si atom at 0.99970 0.77330 0.10510 mapped onto lattice site at 0.99970 0.77330 0.10510 distance= 0.00000
+Si atom at 1.89307 0.56003 0.22823 mapped onto lattice site at 1.89307 0.56003 0.22823 distance= 0.00000
+Si atom at 1.99970 0.77330 0.10510 mapped onto lattice site at 1.99970 0.77330 0.10510 distance= 0.00000
+Si atom at 1.77360 0.77330 0.10510 mapped onto lattice site at 1.77360 0.77330 0.10510 distance= 0.00000
+Si atom at 2.77360 0.77330 0.10510 mapped onto lattice site at 2.77360 0.77330 0.10510 distance= 0.00000
+Si atom at 0.66697 1.10693 0.22823 mapped onto lattice site at 0.66697 1.10693 0.22823 distance= 0.00000
+Si atom at 0.43997 1.10693 0.22823 mapped onto lattice site at 0.43997 1.10693 0.22823 distance= 0.00000
+Si atom at 1.66697 1.10693 0.22823 mapped onto lattice site at 1.66697 1.10693 0.22823 distance= 0.00000
+Si atom at 1.22670 1.00030 0.10510 mapped onto lattice site at 1.22670 1.00030 0.10510 distance= 0.00000
+Si atom at 2.77360 1.00030 0.10510 mapped onto lattice site at 2.77360 1.00030 0.10510 distance= 0.00000
+Si atom at 2.22670 1.00030 0.10510 mapped onto lattice site at 2.22670 1.00030 0.10510 distance= 0.00000
+Si atom at 1.99970 0.22640 0.10510 mapped onto lattice site at 1.99970 0.22640 0.10510 distance= 0.00000
+Si atom at 1.43997 0.10693 0.22823 mapped onto lattice site at 1.43997 0.10693 0.22823 distance= 0.00000
+Si atom at 1.22670 0.22640 0.10510 mapped onto lattice site at 1.22670 0.22640 0.10510 distance= 0.00000
+Si atom at 2.22670 0.22640 0.10510 mapped onto lattice site at 2.22670 0.22640 0.10510 distance= 0.00000
+Si atom at 0.22670 1.22640 0.10510 mapped onto lattice site at 0.22670 1.22640 0.10510 distance= 0.00000
+Si atom at 1.99970 1.22640 0.10510 mapped onto lattice site at 1.99970 1.22640 0.10510 distance= 0.00000
+Si atom at 1.22670 1.22640 0.10510 mapped onto lattice site at 1.22670 1.22640 0.10510 distance= 0.00000
+Si atom at 0.43997 2.10693 0.22823 mapped onto lattice site at 0.43997 2.10693 0.22823 distance= 0.00000
+Si atom at 1.43997 2.10693 0.22823 mapped onto lattice site at 1.43997 2.10693 0.22823 distance= 0.00000
+Si atom at 0.89307 0.56003 0.22823 mapped onto lattice site at 0.89307 0.56003 0.22823 distance= 0.00000
+Si atom at 0.77360 0.77330 0.10510 mapped onto lattice site at 0.77360 0.77330 0.10510 distance= 0.00000
+Si atom at 1.66697 0.56003 0.22823 mapped onto lattice site at 1.66697 0.56003 0.22823 distance= 0.00000
+Si atom at 2.89307 0.56003 0.22823 mapped onto lattice site at 2.89307 0.56003 0.22823 distance= 0.00000
+Si atom at 2.66697 0.56003 0.22823 mapped onto lattice site at 2.66697 0.56003 0.22823 distance= 0.00000
+Si atom at 0.77360 1.00030 0.10510 mapped onto lattice site at 0.77360 1.00030 0.10510 distance= 0.00000
+Si atom at 0.22670 1.00030 0.10510 mapped onto lattice site at 0.22670 1.00030 0.10510 distance= 0.00000
+Si atom at 1.77360 1.00030 0.10510 mapped onto lattice site at 1.77360 1.00030 0.10510 distance= 0.00000
+Si atom at 1.43997 1.10693 0.22823 mapped onto lattice site at 1.43997 1.10693 0.22823 distance= 0.00000
+Si atom at 2.43997 1.10693 0.22823 mapped onto lattice site at 2.43997 1.10693 0.22823 distance= 0.00000
+Si atom at 0.44027 0.33363 0.43843 mapped onto lattice site at 0.44027 0.33363 0.43843 distance= 0.00000
+Si atom at 1.33303 0.43997 0.77177 mapped onto lattice site at 1.33303 0.43997 0.77177 distance= 0.00000
+Si atom at 1.66637 0.55973 0.43843 mapped onto lattice site at 1.66637 0.55973 0.43843 distance= 0.00000
+Si atom at 1.10693 0.66697 0.77177 mapped onto lattice site at 1.10693 0.66697 0.77177 distance= 0.00000
+Si atom at 1.56003 0.66697 0.77177 mapped onto lattice site at 1.56003 0.66697 0.77177 distance= 0.00000
+Si atom at 2.44027 0.33363 0.43843 mapped onto lattice site at 2.44027 0.33363 0.43843 distance= 0.00000
+Si atom at 2.10693 0.66697 0.77177 mapped onto lattice site at 2.10693 0.66697 0.77177 distance= 0.00000
+Si atom at 2.56003 0.66697 0.77177 mapped onto lattice site at 2.56003 0.66697 0.77177 distance= 0.00000
+Si atom at 0.66637 1.10663 0.43843 mapped onto lattice site at 0.66637 1.10663 0.43843 distance= 0.00000
+Si atom at 0.33363 1.89337 0.56157 mapped onto lattice site at 0.33363 1.89337 0.56157 distance= 0.00000
+Si atom at 0.55973 1.66637 0.56157 mapped onto lattice site at 0.55973 1.66637 0.56157 distance= 0.00000
+Si atom at 0.44027 1.10663 0.43843 mapped onto lattice site at 0.44027 1.10663 0.43843 distance= 0.00000
+Si atom at 1.66637 1.10663 0.43843 mapped onto lattice site at 1.66637 1.10663 0.43843 distance= 0.00000
+Si atom at 1.55973 1.66637 0.56157 mapped onto lattice site at 1.55973 1.66637 0.56157 distance= 0.00000
+Si atom at 1.55973 1.89337 0.56157 mapped onto lattice site at 1.55973 1.89337 0.56157 distance= 0.00000
+Si atom at 2.66637 1.10663 0.43843 mapped onto lattice site at 2.66637 1.10663 0.43843 distance= 0.00000
+Si atom at 2.55973 1.66637 0.56157 mapped onto lattice site at 2.55973 1.66637 0.56157 distance= 0.00000
+Si atom at 2.55973 1.89337 0.56157 mapped onto lattice site at 2.55973 1.89337 0.56157 distance= 0.00000
+Si atom at 2.44027 1.10663 0.43843 mapped onto lattice site at 2.44027 1.10663 0.43843 distance= 0.00000
+Si atom at 0.66637 2.10663 0.43843 mapped onto lattice site at 0.66637 2.10663 0.43843 distance= 0.00000
+Si atom at 0.55973 2.89337 0.56157 mapped onto lattice site at 0.55973 2.89337 0.56157 distance= 0.00000
+Si atom at 0.44027 2.10663 0.43843 mapped onto lattice site at 0.44027 2.10663 0.43843 distance= 0.00000
+Si atom at 1.66637 2.10663 0.43843 mapped onto lattice site at 1.66637 2.10663 0.43843 distance= 0.00000
+Si atom at 1.55973 2.89337 0.56157 mapped onto lattice site at 1.55973 2.89337 0.56157 distance= 0.00000
+Si atom at 2.66637 2.10663 0.43843 mapped onto lattice site at 2.66637 2.10663 0.43843 distance= 0.00000
+Si atom at 2.55973 2.89337 0.56157 mapped onto lattice site at 2.55973 2.89337 0.56157 distance= 0.00000
+Si atom at 2.44027 2.10663 0.43843 mapped onto lattice site at 2.44027 2.10663 0.43843 distance= 0.00000
+Si atom at 0.55973 1.89337 0.56157 mapped onto lattice site at 0.55973 1.89337 0.56157 distance= 0.00000
+Si atom at 0.44027 1.33363 0.43843 mapped onto lattice site at 0.44027 1.33363 0.43843 distance= 0.00000
+Si atom at 0.10663 1.66637 0.56157 mapped onto lattice site at 0.10663 1.66637 0.56157 distance= 0.00000
+Si atom at 0.89337 1.33363 0.43843 mapped onto lattice site at 0.89337 1.33363 0.43843 distance= 0.00000
+Si atom at 1.33363 1.89337 0.56157 mapped onto lattice site at 1.33363 1.89337 0.56157 distance= 0.00000
+Si atom at 1.44027 1.33363 0.43843 mapped onto lattice site at 1.44027 1.33363 0.43843 distance= 0.00000
+Si atom at 1.44027 1.10663 0.43843 mapped onto lattice site at 1.44027 1.10663 0.43843 distance= 0.00000
+Si atom at 1.10663 1.66637 0.56157 mapped onto lattice site at 1.10663 1.66637 0.56157 distance= 0.00000
+Si atom at 1.89337 1.33363 0.43843 mapped onto lattice site at 1.89337 1.33363 0.43843 distance= 0.00000
+Si atom at 2.44027 1.33363 0.43843 mapped onto lattice site at 2.44027 1.33363 0.43843 distance= 0.00000
+Si atom at 2.89337 1.33363 0.43843 mapped onto lattice site at 2.89337 1.33363 0.43843 distance= 0.00000
+Si atom at 1.44027 2.10663 0.43843 mapped onto lattice site at 1.44027 2.10663 0.43843 distance= 0.00000
+Si atom at 0.77330 0.99970 0.89490 mapped onto lattice site at 0.77330 0.99970 0.89490 distance= 0.00000
+Si atom at 2.22640 0.99970 0.89490 mapped onto lattice site at 2.22640 0.99970 0.89490 distance= 0.00000
+Si atom at 3.00030 1.22670 0.89490 mapped onto lattice site at 3.00030 1.22670 0.89490 distance= 0.00000
+Si atom at 0.22640 1.22670 0.89490 mapped onto lattice site at 0.22640 1.22670 0.89490 distance= 0.00000
+Si atom at 2.22640 1.22670 0.89490 mapped onto lattice site at 2.22640 1.22670 0.89490 distance= 0.00000
+Si atom at 0.22640 0.99970 0.89490 mapped onto lattice site at 0.22640 0.99970 0.89490 distance= 0.00000
+Si atom at 1.00030 0.77360 0.89490 mapped onto lattice site at 1.00030 0.77360 0.89490 distance= 0.00000
+Si atom at 1.22640 0.22670 0.89490 mapped onto lattice site at 1.22640 0.22670 0.89490 distance= 0.00000
+Si atom at 1.77330 0.99970 0.89490 mapped onto lattice site at 1.77330 0.99970 0.89490 distance= 0.00000
+Si atom at 2.00030 0.77360 0.89490 mapped onto lattice site at 2.00030 0.77360 0.89490 distance= 0.00000
+Si atom at 1.00030 1.22670 0.89490 mapped onto lattice site at 1.00030 1.22670 0.89490 distance= 0.00000
+Si atom at 1.22640 1.22670 0.89490 mapped onto lattice site at 1.22640 1.22670 0.89490 distance= 0.00000
+Si atom at 2.00030 1.22670 0.89490 mapped onto lattice site at 2.00030 1.22670 0.89490 distance= 0.00000
+Si atom at 0.22640 2.22670 0.89490 mapped onto lattice site at 0.22640 2.22670 0.89490 distance= 0.00000
+Si atom at 1.00030 2.22670 0.89490 mapped onto lattice site at 1.00030 2.22670 0.89490 distance= 0.00000
+Si atom at 1.22640 2.22670 0.89490 mapped onto lattice site at 1.22640 2.22670 0.89490 distance= 0.00000
+Si atom at 2.00030 2.22670 0.89490 mapped onto lattice site at 2.00030 2.22670 0.89490 distance= 0.00000
+Si atom at 0.77360 3.00030 0.10510 mapped onto lattice site at 0.77360 3.00030 0.10510 distance= 0.00000
+Si atom at 0.89307 1.56003 0.22823 mapped onto lattice site at 0.89307 1.56003 0.22823 distance= 0.00000
+Si atom at 0.66697 1.56003 0.22823 mapped onto lattice site at 0.66697 1.56003 0.22823 distance= 0.00000
+Si atom at 0.99970 1.77330 0.10510 mapped onto lattice site at 0.99970 1.77330 0.10510 distance= 0.00000
+Si atom at 0.89307 1.33303 0.22823 mapped onto lattice site at 0.89307 1.33303 0.22823 distance= 0.00000
+Si atom at 0.77360 1.77330 0.10510 mapped onto lattice site at 0.77360 1.77330 0.10510 distance= 0.00000
+Si atom at 1.89307 1.56003 0.22823 mapped onto lattice site at 1.89307 1.56003 0.22823 distance= 0.00000
+Si atom at 1.66697 1.56003 0.22823 mapped onto lattice site at 1.66697 1.56003 0.22823 distance= 0.00000
+Si atom at 1.43997 1.33303 0.22823 mapped onto lattice site at 1.43997 1.33303 0.22823 distance= 0.00000
+Si atom at 2.89307 1.56003 0.22823 mapped onto lattice site at 2.89307 1.56003 0.22823 distance= 0.00000
+Si atom at 2.43997 1.33303 0.22823 mapped onto lattice site at 2.43997 1.33303 0.22823 distance= 0.00000
+Si atom at 2.89307 1.33303 0.22823 mapped onto lattice site at 2.89307 1.33303 0.22823 distance= 0.00000
+Si atom at 2.77360 1.77330 0.10510 mapped onto lattice site at 2.77360 1.77330 0.10510 distance= 0.00000
+Si atom at 0.99970 2.77330 0.10510 mapped onto lattice site at 0.99970 2.77330 0.10510 distance= 0.00000
+Si atom at 0.77360 2.00030 0.10510 mapped onto lattice site at 0.77360 2.00030 0.10510 distance= 0.00000
+Si atom at 0.22670 2.00030 0.10510 mapped onto lattice site at 0.22670 2.00030 0.10510 distance= 0.00000
+Si atom at 1.43997 2.33303 0.22823 mapped onto lattice site at 1.43997 2.33303 0.22823 distance= 0.00000
+Si atom at 1.99970 2.77330 0.10510 mapped onto lattice site at 1.99970 2.77330 0.10510 distance= 0.00000
+Si atom at 1.22670 2.00030 0.10510 mapped onto lattice site at 1.22670 2.00030 0.10510 distance= 0.00000
+Si atom at 2.43997 2.33303 0.22823 mapped onto lattice site at 2.43997 2.33303 0.22823 distance= 0.00000
+Si atom at 2.66697 1.10693 0.22823 mapped onto lattice site at 2.66697 1.10693 0.22823 distance= 0.00000
+Si atom at 0.33303 0.89307 0.77177 mapped onto lattice site at 0.33303 0.89307 0.77177 distance= 0.00000
+Si atom at 0.56003 0.89307 0.77177 mapped onto lattice site at 0.56003 0.89307 0.77177 distance= 0.00000
+Si atom at 0.33303 1.43997 0.77177 mapped onto lattice site at 0.33303 1.43997 0.77177 distance= 0.00000
+Si atom at 0.10693 1.66697 0.77177 mapped onto lattice site at 0.10693 1.66697 0.77177 distance= 0.00000
+Si atom at 0.10693 1.43997 0.77177 mapped onto lattice site at 0.10693 1.43997 0.77177 distance= 0.00000
+Si atom at 1.10693 1.66697 0.77177 mapped onto lattice site at 1.10693 1.66697 0.77177 distance= 0.00000
+Si atom at 1.10693 1.43997 0.77177 mapped onto lattice site at 1.10693 1.43997 0.77177 distance= 0.00000
+Si atom at 1.56003 1.66697 0.77177 mapped onto lattice site at 1.56003 1.66697 0.77177 distance= 0.00000
+Si atom at 2.33303 1.43997 0.77177 mapped onto lattice site at 2.33303 1.43997 0.77177 distance= 0.00000
+Si atom at 2.10693 1.66697 0.77177 mapped onto lattice site at 2.10693 1.66697 0.77177 distance= 0.00000
+Si atom at 2.10693 1.43997 0.77177 mapped onto lattice site at 2.10693 1.43997 0.77177 distance= 0.00000
+Si atom at 2.56003 1.66697 0.77177 mapped onto lattice site at 2.56003 1.66697 0.77177 distance= 0.00000
+Si atom at 0.33303 2.89307 0.77177 mapped onto lattice site at 0.33303 2.89307 0.77177 distance= 0.00000
+Si atom at 0.55973 2.66637 0.56157 mapped onto lattice site at 0.55973 2.66637 0.56157 distance= 0.00000
+Si atom at 0.66637 2.55973 0.43843 mapped onto lattice site at 0.66637 2.55973 0.43843 distance= 0.00000
+Si atom at 0.56003 2.66697 0.77177 mapped onto lattice site at 0.56003 2.66697 0.77177 distance= 0.00000
+Si atom at 0.89337 2.55973 0.43843 mapped onto lattice site at 0.89337 2.55973 0.43843 distance= 0.00000
+Si atom at 0.56003 2.89307 0.77177 mapped onto lattice site at 0.56003 2.89307 0.77177 distance= 0.00000
+Si atom at 1.10693 2.66697 0.77177 mapped onto lattice site at 1.10693 2.66697 0.77177 distance= 0.00000
+Si atom at 1.10663 2.66637 0.56157 mapped onto lattice site at 1.10663 2.66637 0.56157 distance= 0.00000
+Si atom at 1.56003 2.66697 0.77177 mapped onto lattice site at 1.56003 2.66697 0.77177 distance= 0.00000
+Si atom at 1.56003 2.89307 0.77177 mapped onto lattice site at 1.56003 2.89307 0.77177 distance= 0.00000
+Si atom at 2.55973 2.66637 0.56157 mapped onto lattice site at 2.55973 2.66637 0.56157 distance= 0.00000
+Si atom at 2.66637 2.55973 0.43843 mapped onto lattice site at 2.66637 2.55973 0.43843 distance= 0.00000
+Si atom at 2.10693 2.66697 0.77177 mapped onto lattice site at 2.10693 2.66697 0.77177 distance= 0.00000
+Si atom at 2.56003 2.66697 0.77177 mapped onto lattice site at 2.56003 2.66697 0.77177 distance= 0.00000
+Si atom at 2.89337 2.55973 0.43843 mapped onto lattice site at 2.89337 2.55973 0.43843 distance= 0.00000
+Si atom at 2.56003 2.89307 0.77177 mapped onto lattice site at 2.56003 2.89307 0.77177 distance= 0.00000
+Si atom at 2.33363 1.89337 0.56157 mapped onto lattice site at 2.33363 1.89337 0.56157 distance= 0.00000
+Si atom at 2.10663 1.66637 0.56157 mapped onto lattice site at 2.10663 1.66637 0.56157 distance= 0.00000
+Si atom at 1.22640 0.99970 0.89490 mapped onto lattice site at 1.22640 0.99970 0.89490 distance= 0.00000
+Si atom at 2.77330 0.99970 0.89490 mapped onto lattice site at 2.77330 0.99970 0.89490 distance= 0.00000
+Si atom at 1.77330 1.99970 0.89490 mapped onto lattice site at 1.77330 1.99970 0.89490 distance= 0.00000
+Si atom at 0.77330 2.77360 0.89490 mapped onto lattice site at 0.77330 2.77360 0.89490 distance= 0.00000
+Si atom at 1.00030 2.77360 0.89490 mapped onto lattice site at 1.00030 2.77360 0.89490 distance= 0.00000
+Si atom at 2.00030 2.77360 0.89490 mapped onto lattice site at 2.00030 2.77360 0.89490 distance= 0.00000
+Si atom at 2.22640 2.22670 0.89490 mapped onto lattice site at 2.22640 2.22670 0.89490 distance= 0.00000
+Si atom at 0.22670 3.00030 0.10510 mapped onto lattice site at 0.22670 3.00030 0.10510 distance= 0.00000
+Si atom at 1.77360 3.00030 0.10510 mapped onto lattice site at 1.77360 3.00030 0.10510 distance= 0.00000
+Si atom at 1.22670 3.00030 0.10510 mapped onto lattice site at 1.22670 3.00030 0.10510 distance= 0.00000
+Si atom at 2.77360 3.00030 0.10510 mapped onto lattice site at 2.77360 3.00030 0.10510 distance= 0.00000
+Si atom at 2.22670 3.00030 0.10510 mapped onto lattice site at 2.22670 3.00030 0.10510 distance= 0.00000
+Si atom at 0.43997 1.33303 0.22823 mapped onto lattice site at 0.43997 1.33303 0.22823 distance= 0.00000
+Si atom at 1.99970 1.77330 0.10510 mapped onto lattice site at 1.99970 1.77330 0.10510 distance= 0.00000
+Si atom at 1.77360 1.77330 0.10510 mapped onto lattice site at 1.77360 1.77330 0.10510 distance= 0.00000
+Si atom at 1.77360 2.00030 0.10510 mapped onto lattice site at 1.77360 2.00030 0.10510 distance= 0.00000
+Si atom at 2.77360 2.00030 0.10510 mapped onto lattice site at 2.77360 2.00030 0.10510 distance= 0.00000
+Si atom at 2.22670 2.00030 0.10510 mapped onto lattice site at 2.22670 2.00030 0.10510 distance= 0.00000
+Si atom at 1.66697 0.10693 0.22823 mapped onto lattice site at 1.66697 0.10693 0.22823 distance= 0.00000
+Si atom at 2.89307 0.33303 0.22823 mapped onto lattice site at 2.89307 0.33303 0.22823 distance= 0.00000
+Si atom at 1.66697 2.10693 0.22823 mapped onto lattice site at 1.66697 2.10693 0.22823 distance= 0.00000
+Si atom at 2.66697 2.10693 0.22823 mapped onto lattice site at 2.66697 2.10693 0.22823 distance= 0.00000
+Si atom at 1.89307 1.33303 0.22823 mapped onto lattice site at 1.89307 1.33303 0.22823 distance= 0.00000
+Si atom at 2.66697 1.56003 0.22823 mapped onto lattice site at 2.66697 1.56003 0.22823 distance= 0.00000
+Si atom at 2.99970 1.77330 0.10510 mapped onto lattice site at 2.99970 1.77330 0.10510 distance= 0.00000
+Si atom at 0.43997 2.33303 0.22823 mapped onto lattice site at 0.43997 2.33303 0.22823 distance= 0.00000
+Si atom at 0.89307 2.33303 0.22823 mapped onto lattice site at 0.89307 2.33303 0.22823 distance= 0.00000
+Si atom at 0.77360 2.77330 0.10510 mapped onto lattice site at 0.77360 2.77330 0.10510 distance= 0.00000
+Si atom at 1.89307 2.33303 0.22823 mapped onto lattice site at 1.89307 2.33303 0.22823 distance= 0.00000
+Si atom at 1.77360 2.77330 0.10510 mapped onto lattice site at 1.77360 2.77330 0.10510 distance= 0.00000
+Si atom at 2.99970 2.77330 0.10510 mapped onto lattice site at 2.99970 2.77330 0.10510 distance= 0.00000
+Si atom at 2.89307 2.33303 0.22823 mapped onto lattice site at 2.89307 2.33303 0.22823 distance= 0.00000
+Si atom at 2.77360 2.77330 0.10510 mapped onto lattice site at 2.77360 2.77330 0.10510 distance= 0.00000
+Si atom at 1.56003 0.89307 0.77177 mapped onto lattice site at 1.56003 0.89307 0.77177 distance= 0.00000
+Si atom at 0.56003 1.66697 0.77177 mapped onto lattice site at 0.56003 1.66697 0.77177 distance= 0.00000
+Si atom at 0.10693 2.66697 0.77177 mapped onto lattice site at 0.10693 2.66697 0.77177 distance= 0.00000
+Si atom at 1.55973 2.66637 0.56157 mapped onto lattice site at 1.55973 2.66637 0.56157 distance= 0.00000
+Si atom at 1.66637 2.55973 0.43843 mapped onto lattice site at 1.66637 2.55973 0.43843 distance= 0.00000
+Si atom at 1.89337 2.55973 0.43843 mapped onto lattice site at 1.89337 2.55973 0.43843 distance= 0.00000
+Si atom at 1.89337 0.55973 0.43843 mapped onto lattice site at 1.89337 0.55973 0.43843 distance= 0.00000
+Si atom at 2.33363 0.89337 0.56157 mapped onto lattice site at 2.33363 0.89337 0.56157 distance= 0.00000
+Si atom at 2.10663 0.66637 0.56157 mapped onto lattice site at 2.10663 0.66637 0.56157 distance= 0.00000
+Si atom at 2.10663 0.44027 0.56157 mapped onto lattice site at 2.10663 0.44027 0.56157 distance= 0.00000
+Si atom at 2.33363 2.89337 0.56157 mapped onto lattice site at 2.33363 2.89337 0.56157 distance= 0.00000
+Si atom at 1.33303 0.89307 0.77177 mapped onto lattice site at 1.33303 0.89307 0.77177 distance= 0.00000
+Si atom at 2.33303 0.89307 0.77177 mapped onto lattice site at 2.33303 0.89307 0.77177 distance= 0.00000
+Si atom at 2.56003 0.89307 0.77177 mapped onto lattice site at 2.56003 0.89307 0.77177 distance= 0.00000
+Si atom at 1.33303 1.43997 0.77177 mapped onto lattice site at 1.33303 1.43997 0.77177 distance= 0.00000
+Si atom at 0.10663 2.66637 0.56157 mapped onto lattice site at 0.10663 2.66637 0.56157 distance= 0.00000
+Si atom at 1.33303 2.89307 0.77177 mapped onto lattice site at 1.33303 2.89307 0.77177 distance= 0.00000
+Si atom at 2.33303 2.89307 0.77177 mapped onto lattice site at 2.33303 2.89307 0.77177 distance= 0.00000
+Si atom at 2.10663 2.66637 0.56157 mapped onto lattice site at 2.10663 2.66637 0.56157 distance= 0.00000
+Si atom at 2.22640 0.22670 0.89490 mapped onto lattice site at 2.22640 0.22670 0.89490 distance= 0.00000
+Si atom at 0.22640 1.99970 0.89490 mapped onto lattice site at 0.22640 1.99970 0.89490 distance= 0.00000
+Si atom at 0.77330 1.99970 0.89490 mapped onto lattice site at 0.77330 1.99970 0.89490 distance= 0.00000
+Si atom at 1.22640 1.99970 0.89490 mapped onto lattice site at 1.22640 1.99970 0.89490 distance= 0.00000
+Si atom at 2.22640 1.99970 0.89490 mapped onto lattice site at 2.22640 1.99970 0.89490 distance= 0.00000
+Si atom at 2.77330 1.99970 0.89490 mapped onto lattice site at 2.77330 1.99970 0.89490 distance= 0.00000
+Si atom at 3.00030 2.77360 0.89490 mapped onto lattice site at 3.00030 2.77360 0.89490 distance= 0.00000
+Si atom at 1.77330 2.77360 0.89490 mapped onto lattice site at 1.77330 2.77360 0.89490 distance= 0.00000
+Si atom at 2.77330 2.77360 0.89490 mapped onto lattice site at 2.77330 2.77360 0.89490 distance= 0.00000
+Si atom at 0.89307 2.56003 0.22823 mapped onto lattice site at 0.89307 2.56003 0.22823 distance= 0.00000
+Si atom at 0.66697 2.56003 0.22823 mapped onto lattice site at 0.66697 2.56003 0.22823 distance= 0.00000
+Si atom at 0.22670 2.22640 0.10510 mapped onto lattice site at 0.22670 2.22640 0.10510 distance= 0.00000
+Si atom at 1.89307 2.56003 0.22823 mapped onto lattice site at 1.89307 2.56003 0.22823 distance= 0.00000
+Si atom at 1.66697 2.56003 0.22823 mapped onto lattice site at 1.66697 2.56003 0.22823 distance= 0.00000
+Si atom at 1.99970 2.22640 0.10510 mapped onto lattice site at 1.99970 2.22640 0.10510 distance= 0.00000
+Si atom at 1.22670 2.22640 0.10510 mapped onto lattice site at 1.22670 2.22640 0.10510 distance= 0.00000
+Si atom at 2.89307 2.56003 0.22823 mapped onto lattice site at 2.89307 2.56003 0.22823 distance= 0.00000
+Si atom at 2.22670 2.22640 0.10510 mapped onto lattice site at 2.22670 2.22640 0.10510 distance= 0.00000
+Si atom at 0.99970 2.22640 0.10510 mapped onto lattice site at 0.99970 2.22640 0.10510 distance= 0.00000
+Si atom at 2.66697 2.56003 0.22823 mapped onto lattice site at 2.66697 2.56003 0.22823 distance= 0.00000
+Si atom at 0.33363 1.44027 0.56157 mapped onto lattice site at 0.33363 1.44027 0.56157 distance= 0.00000
+Si atom at 0.33303 1.89307 0.77177 mapped onto lattice site at 0.33303 1.89307 0.77177 distance= 0.00000
+Si atom at 0.66637 1.55973 0.43843 mapped onto lattice site at 0.66637 1.55973 0.43843 distance= 0.00000
+Si atom at 0.10663 1.44027 0.56157 mapped onto lattice site at 0.10663 1.44027 0.56157 distance= 0.00000
+Si atom at 0.89337 1.55973 0.43843 mapped onto lattice site at 0.89337 1.55973 0.43843 distance= 0.00000
+Si atom at 0.56003 1.89307 0.77177 mapped onto lattice site at 0.56003 1.89307 0.77177 distance= 0.00000
+Si atom at 1.33363 1.44027 0.56157 mapped onto lattice site at 1.33363 1.44027 0.56157 distance= 0.00000
+Si atom at 1.33303 1.89307 0.77177 mapped onto lattice site at 1.33303 1.89307 0.77177 distance= 0.00000
+Si atom at 1.66637 1.55973 0.43843 mapped onto lattice site at 1.66637 1.55973 0.43843 distance= 0.00000
+Si atom at 1.10663 1.44027 0.56157 mapped onto lattice site at 1.10663 1.44027 0.56157 distance= 0.00000
+Si atom at 1.89337 1.55973 0.43843 mapped onto lattice site at 1.89337 1.55973 0.43843 distance= 0.00000
+Si atom at 1.56003 1.89307 0.77177 mapped onto lattice site at 1.56003 1.89307 0.77177 distance= 0.00000
+Si atom at 2.10663 1.44027 0.56157 mapped onto lattice site at 2.10663 1.44027 0.56157 distance= 0.00000
+Si atom at 0.33363 2.44027 0.56157 mapped onto lattice site at 0.33363 2.44027 0.56157 distance= 0.00000
+Si atom at 0.10663 2.44027 0.56157 mapped onto lattice site at 0.10663 2.44027 0.56157 distance= 0.00000
+Si atom at 1.33363 2.44027 0.56157 mapped onto lattice site at 1.33363 2.44027 0.56157 distance= 0.00000
+Si atom at 1.10663 2.44027 0.56157 mapped onto lattice site at 1.10663 2.44027 0.56157 distance= 0.00000
+Si atom at 2.10693 2.43997 0.77177 mapped onto lattice site at 2.10693 2.43997 0.77177 distance= 0.00000
+Si atom at 2.10663 2.44027 0.56157 mapped onto lattice site at 2.10663 2.44027 0.56157 distance= 0.00000
+Si atom at 0.33303 2.43997 0.77177 mapped onto lattice site at 0.33303 2.43997 0.77177 distance= 0.00000
+Si atom at 0.10693 2.43997 0.77177 mapped onto lattice site at 0.10693 2.43997 0.77177 distance= 0.00000
+Si atom at 1.33303 2.43997 0.77177 mapped onto lattice site at 1.33303 2.43997 0.77177 distance= 0.00000
+Si atom at 1.10693 2.43997 0.77177 mapped onto lattice site at 1.10693 2.43997 0.77177 distance= 0.00000
+Si atom at 2.33303 2.43997 0.77177 mapped onto lattice site at 2.33303 2.43997 0.77177 distance= 0.00000
+Si atom at 2.33363 2.44027 0.56157 mapped onto lattice site at 2.33363 2.44027 0.56157 distance= 0.00000
+Si atom at 0.77330 1.77360 0.89490 mapped onto lattice site at 0.77330 1.77360 0.89490 distance= 0.00000
+Si atom at 1.00030 1.77360 0.89490 mapped onto lattice site at 1.00030 1.77360 0.89490 distance= 0.00000
+Si atom at 1.77330 1.77360 0.89490 mapped onto lattice site at 1.77330 1.77360 0.89490 distance= 0.00000
+Si atom at 2.77330 1.77360 0.89490 mapped onto lattice site at 2.77330 1.77360 0.89490 distance= 0.00000
+Si atom at 3.00030 2.22670 0.89490 mapped onto lattice site at 3.00030 2.22670 0.89490 distance= 0.00000
+Si atom at 2.99970 1.22640 0.10510 mapped onto lattice site at 2.99970 1.22640 0.10510 distance= 0.00000
+Si atom at 2.99970 2.22640 0.10510 mapped onto lattice site at 2.99970 2.22640 0.10510 distance= 0.00000
+Si atom at 2.66637 1.55973 0.43843 mapped onto lattice site at 2.66637 1.55973 0.43843 distance= 0.00000
+Si atom at 2.89337 1.55973 0.43843 mapped onto lattice site at 2.89337 1.55973 0.43843 distance= 0.00000
+Si atom at 2.56003 1.89307 0.77177 mapped onto lattice site at 2.56003 1.89307 0.77177 distance= 0.00000
+Si atom at 2.33303 0.43997 0.77177 mapped onto lattice site at 2.33303 0.43997 0.77177 distance= 0.00000
+Si atom at 2.33363 0.44027 0.56157 mapped onto lattice site at 2.33363 0.44027 0.56157 distance= 0.00000
+Si atom at 2.89337 0.33363 0.43843 mapped onto lattice site at 2.89337 0.33363 0.43843 distance= 0.00000
+Si atom at 2.33363 1.44027 0.56157 mapped onto lattice site at 2.33363 1.44027 0.56157 distance= 0.00000
+Si atom at 2.33303 1.89307 0.77177 mapped onto lattice site at 2.33303 1.89307 0.77177 distance= 0.00000
+Si atom at 3.00030 1.77360 0.89490 mapped onto lattice site at 3.00030 1.77360 0.89490 distance= 0.00000
+Si atom at 2.00030 1.77360 0.89490 mapped onto lattice site at 2.00030 1.77360 0.89490 distance= 0.00000
+Si atom at 2.77330 0.77360 0.89490 mapped onto lattice site at 2.77330 0.77360 0.89490 distance= 0.00000
+Si atom at 1.44027 2.33363 0.43843 mapped onto lattice site at 1.44027 2.33363 0.43843 distance= 0.00000
+Si atom at 2.99970 0.77330 0.10510 mapped onto lattice site at 2.99970 0.77330 0.10510 distance= 0.00000
+Si atom at 0.44027 2.33363 0.43843 mapped onto lattice site at 0.44027 2.33363 0.43843 distance= 0.00000
+Si atom at 0.89337 2.33363 0.43843 mapped onto lattice site at 0.89337 2.33363 0.43843 distance= 0.00000
+Si atom at 2.44027 2.33363 0.43843 mapped onto lattice site at 2.44027 2.33363 0.43843 distance= 0.00000
+Si atom at 1.89337 2.33363 0.43843 mapped onto lattice site at 1.89337 2.33363 0.43843 distance= 0.00000
+Si atom at 2.89337 2.33363 0.43843 mapped onto lattice site at 2.89337 2.33363 0.43843 distance= 0.00000
+Si atom at 0.77330 2.99970 0.89490 mapped onto lattice site at 0.77330 2.99970 0.89490 distance= 0.00000
+Si atom at 0.22640 2.99970 0.89490 mapped onto lattice site at 0.22640 2.99970 0.89490 distance= 0.00000
+Si atom at 1.22640 2.99970 0.89490 mapped onto lattice site at 1.22640 2.99970 0.89490 distance= 0.00000
+Si atom at 1.77330 2.99970 0.89490 mapped onto lattice site at 1.77330 2.99970 0.89490 distance= 0.00000
+Si atom at 2.22640 2.99970 0.89490 mapped onto lattice site at 2.22640 2.99970 0.89490 distance= 0.00000
+Si atom at 2.77330 2.99970 0.89490 mapped onto lattice site at 2.77330 2.99970 0.89490 distance= 0.00000
+O atom ignored at 0.56867 0.13733 0.45603
+O atom ignored at 0.23533 0.47067 0.78937
+O atom ignored at 0.09800 0.90200 0.87730
+O atom ignored at 0.76467 0.23533 0.21063
+O atom ignored at 0.43133 0.56867 0.54397
+O atom ignored at 0.09800 0.19600 0.87730
+O atom ignored at 0.90200 0.80400 0.12270
+O atom ignored at 0.43133 0.86267 0.54397
+O atom ignored at 0.80400 0.90200 0.87730
+O atom ignored at 0.47067 0.23533 0.21063
+O atom ignored at 0.13733 0.56867 0.54397
+O atom ignored at 0.19600 0.09800 0.12270
+O atom ignored at 0.86267 0.43133 0.45603
+O atom ignored at 0.52933 0.76467 0.78937
+O atom ignored at 0.23533 0.76467 0.78937
+O atom ignored at 0.56867 0.43133 0.45603
+O atom ignored at 0.76467 0.52933 0.21063
+O atom ignored at 0.90200 0.09800 0.12270
+O atom ignored at 0.64337 0.99993 0.50003
+O atom ignored at 0.31003 0.33327 0.83337
+O atom ignored at 0.02330 0.68990 0.83330
+O atom ignored at 0.68997 0.02323 0.16663
+O atom ignored at 0.35663 0.35657 0.49997
+O atom ignored at 0.02330 0.33340 0.83330
+O atom ignored at 0.68997 0.66673 0.16663
+O atom ignored at 0.35663 3.00007 0.49997
+O atom ignored at 0.31010 0.33340 0.83330
+O atom ignored at 0.97677 0.66673 0.16663
+O atom ignored at 0.64343 3.00007 0.49997
+O atom ignored at 0.68990 0.66660 0.16670
+O atom ignored at 0.35657 0.99993 0.50003
+O atom ignored at 0.02323 0.33327 0.83337
+O atom ignored at 0.66660 0.97670 0.83330
+O atom ignored at 0.33327 0.31003 0.16663
+O atom ignored at 0.99993 0.64337 0.49997
+O atom ignored at 0.66660 0.68990 0.83330
+O atom ignored at 0.33327 0.02323 0.16663
+O atom ignored at 0.99993 0.35657 0.49997
+O atom ignored at 0.33340 0.02330 0.16670
+O atom ignored at 3.00007 0.35663 0.50003
+O atom ignored at 0.66673 0.68997 0.83337
+O atom ignored at 0.33340 0.31010 0.16670
+O atom ignored at 3.00007 0.64343 0.50003
+O atom ignored at 0.66673 0.97677 0.83337
+O atom ignored at 0.64337 0.64343 0.50003
+O atom ignored at 0.97670 0.31010 0.16670
+O atom ignored at 0.97670 0.66660 0.16670
+O atom ignored at 0.31003 0.97677 0.83337
+O atom ignored at 0.78697 0.21313 0.46483
+O atom ignored at 0.45363 0.54647 0.79817
+O atom ignored at 0.87970 0.75950 0.86850
+O atom ignored at 0.54637 0.09283 0.20183
+O atom ignored at 0.21303 0.42617 0.53517
+O atom ignored at 0.87970 0.12020 0.86850
+O atom ignored at 0.54637 0.45353 0.20183
+O atom ignored at 0.21303 0.78687 0.53517
+O atom ignored at 0.24050 0.12030 0.86850
+O atom ignored at 0.90717 0.45363 0.20183
+O atom ignored at 0.57383 0.78697 0.53517
+O atom ignored at 0.75950 0.87970 0.13150
+O atom ignored at 0.42617 0.21303 0.46483
+O atom ignored at 0.09283 0.54637 0.79817
+O atom ignored at 0.78697 0.57383 0.46483
+O atom ignored at 0.12030 0.24050 0.13150
+O atom ignored at 0.45363 0.90717 0.79817
+O atom ignored at 0.12030 0.87980 0.13150
+O atom ignored at 0.66667 0.07563 0.33333
+O atom ignored at 0.33333 0.40897 0.66667
+O atom ignored at 0.25770 3.00000 1.00000
+O atom ignored at 0.92437 0.33333 0.33333
+O atom ignored at 0.59103 0.66667 0.66667
+O atom ignored at 0.25770 0.25770 1.00000
+O atom ignored at 0.92437 0.59103 0.33333
+O atom ignored at 0.59103 0.92437 0.66667
+O atom ignored at 0.74230 3.00000 1.00000
+O atom ignored at 0.40897 0.33333 0.33333
+O atom ignored at 0.07563 0.66667 0.66667
+O atom ignored at 0.74230 0.74230 1.00000
+O atom ignored at 0.40897 0.07563 0.33333
+O atom ignored at 0.07563 0.40897 0.66667
+O atom ignored at 1.00000 0.25770 1.00000
+O atom ignored at 1.00000 0.74230 1.00000
+O atom ignored at 0.25770 1.00000 1.00000
+O atom ignored at 0.74230 1.00000 1.00000
+O atom ignored at 3.00000 0.25770 1.00000
+O atom ignored at 3.00000 0.74230 1.00000
+O atom ignored at 0.25770 3.00000 1.00000
+O atom ignored at 0.25770 0.25770 1.00000
+O atom ignored at 0.74230 3.00000 1.00000
+O atom ignored at 0.74230 0.74230 1.00000
+O atom ignored at 1.00000 0.25770 1.00000
+O atom ignored at 1.00000 0.74230 1.00000
+O atom ignored at 0.25770 1.00000 1.00000
+O atom ignored at 0.74230 1.00000 1.00000
+O atom ignored at 0.33333 0.92437 0.66667
+O atom ignored at 0.66667 0.59103 0.33333
+O atom ignored at 3.00000 0.25770 1.00000
+O atom ignored at 3.00000 0.74230 1.00000
+O atom ignored at 1.56867 0.13733 0.45603
+O atom ignored at 1.23533 0.47067 0.78937
+O atom ignored at 1.09800 0.90200 0.87730
+O atom ignored at 1.76467 0.23533 0.21063
+O atom ignored at 1.43133 0.56867 0.54397
+O atom ignored at 1.09800 0.19600 0.87730
+O atom ignored at 1.90200 0.80400 0.12270
+O atom ignored at 1.43133 0.86267 0.54397
+O atom ignored at 1.80400 0.90200 0.87730
+O atom ignored at 1.47067 0.23533 0.21063
+O atom ignored at 1.13733 0.56867 0.54397
+O atom ignored at 1.19600 0.09800 0.12270
+O atom ignored at 1.86267 0.43133 0.45603
+O atom ignored at 1.52933 0.76467 0.78937
+O atom ignored at 1.23533 0.76467 0.78937
+O atom ignored at 1.56867 0.43133 0.45603
+O atom ignored at 1.76467 0.52933 0.21063
+O atom ignored at 1.90200 0.09800 0.12270
+O atom ignored at 1.64337 0.99993 0.50003
+O atom ignored at 1.31003 0.33327 0.83337
+O atom ignored at 1.02330 0.68990 0.83330
+O atom ignored at 1.68997 0.02323 0.16663
+O atom ignored at 1.35663 0.35657 0.49997
+O atom ignored at 1.02330 0.33340 0.83330
+O atom ignored at 1.68997 0.66673 0.16663
+O atom ignored at 1.35663 3.00007 0.49997
+O atom ignored at 1.31010 0.33340 0.83330
+O atom ignored at 1.97677 0.66673 0.16663
+O atom ignored at 1.64343 3.00007 0.49997
+O atom ignored at 1.68990 0.66660 0.16670
+O atom ignored at 1.35657 0.99993 0.50003
+O atom ignored at 1.02323 0.33327 0.83337
+O atom ignored at 1.66660 0.97670 0.83330
+O atom ignored at 1.33327 0.31003 0.16663
+O atom ignored at 1.99993 0.64337 0.49997
+O atom ignored at 1.66660 0.68990 0.83330
+O atom ignored at 1.33327 0.02323 0.16663
+O atom ignored at 1.99993 0.35657 0.49997
+O atom ignored at 1.33340 0.02330 0.16670
+O atom ignored at 1.00007 0.35663 0.50003
+O atom ignored at 1.66673 0.68997 0.83337
+O atom ignored at 1.33340 0.31010 0.16670
+O atom ignored at 1.00007 0.64343 0.50003
+O atom ignored at 1.66673 0.97677 0.83337
+O atom ignored at 1.64337 0.64343 0.50003
+O atom ignored at 1.97670 0.31010 0.16670
+O atom ignored at 1.97670 0.66660 0.16670
+O atom ignored at 1.31003 0.97677 0.83337
+O atom ignored at 1.78697 0.21313 0.46483
+O atom ignored at 1.45363 0.54647 0.79817
+O atom ignored at 1.87970 0.75950 0.86850
+O atom ignored at 1.54637 0.09283 0.20183
+O atom ignored at 1.21303 0.42617 0.53517
+O atom ignored at 1.87970 0.12020 0.86850
+O atom ignored at 1.54637 0.45353 0.20183
+O atom ignored at 1.21303 0.78687 0.53517
+O atom ignored at 1.24050 0.12030 0.86850
+O atom ignored at 1.90717 0.45363 0.20183
+O atom ignored at 1.57383 0.78697 0.53517
+O atom ignored at 1.75950 0.87970 0.13150
+O atom ignored at 1.42617 0.21303 0.46483
+O atom ignored at 1.09283 0.54637 0.79817
+O atom ignored at 1.78697 0.57383 0.46483
+O atom ignored at 1.12030 0.24050 0.13150
+O atom ignored at 1.45363 0.90717 0.79817
+O atom ignored at 1.12030 0.87980 0.13150
+O atom ignored at 1.66667 0.07563 0.33333
+O atom ignored at 1.33333 0.40897 0.66667
+O atom ignored at 1.25770 3.00000 1.00000
+O atom ignored at 1.92437 0.33333 0.33333
+O atom ignored at 1.59103 0.66667 0.66667
+O atom ignored at 1.25770 0.25770 1.00000
+O atom ignored at 1.92437 0.59103 0.33333
+O atom ignored at 1.59103 0.92437 0.66667
+O atom ignored at 1.74230 3.00000 1.00000
+O atom ignored at 1.40897 0.33333 0.33333
+O atom ignored at 1.07563 0.66667 0.66667
+O atom ignored at 1.74230 0.74230 1.00000
+O atom ignored at 1.40897 0.07563 0.33333
+O atom ignored at 1.07563 0.40897 0.66667
+O atom ignored at 2.00000 0.25770 1.00000
+O atom ignored at 2.00000 0.74230 1.00000
+O atom ignored at 1.25770 1.00000 1.00000
+O atom ignored at 1.74230 1.00000 1.00000
+O atom ignored at 1.25770 3.00000 1.00000
+O atom ignored at 1.25770 0.25770 1.00000
+O atom ignored at 1.74230 3.00000 1.00000
+O atom ignored at 1.74230 0.74230 1.00000
+O atom ignored at 2.00000 0.25770 1.00000
+O atom ignored at 2.00000 0.74230 1.00000
+O atom ignored at 1.25770 1.00000 1.00000
+O atom ignored at 1.74230 1.00000 1.00000
+O atom ignored at 1.33333 0.92437 0.66667
+O atom ignored at 1.66667 0.59103 0.33333
+O atom ignored at 2.56867 0.13733 0.45603
+O atom ignored at 2.23533 0.47067 0.78937
+O atom ignored at 2.09800 0.90200 0.87730
+O atom ignored at 2.76467 0.23533 0.21063
+O atom ignored at 2.43133 0.56867 0.54397
+O atom ignored at 2.09800 0.19600 0.87730
+O atom ignored at 2.90200 0.80400 0.12270
+O atom ignored at 2.43133 0.86267 0.54397
+O atom ignored at 2.80400 0.90200 0.87730
+O atom ignored at 2.47067 0.23533 0.21063
+O atom ignored at 2.13733 0.56867 0.54397
+O atom ignored at 2.19600 0.09800 0.12270
+O atom ignored at 2.86267 0.43133 0.45603
+O atom ignored at 2.52933 0.76467 0.78937
+O atom ignored at 2.23533 0.76467 0.78937
+O atom ignored at 2.56867 0.43133 0.45603
+O atom ignored at 2.76467 0.52933 0.21063
+O atom ignored at 2.90200 0.09800 0.12270
+O atom ignored at 2.64337 0.99993 0.50003
+O atom ignored at 2.31003 0.33327 0.83337
+O atom ignored at 2.02330 0.68990 0.83330
+O atom ignored at 2.68997 0.02323 0.16663
+O atom ignored at 2.35663 0.35657 0.49997
+O atom ignored at 2.02330 0.33340 0.83330
+O atom ignored at 2.68997 0.66673 0.16663
+O atom ignored at 2.35663 3.00007 0.49997
+O atom ignored at 2.31010 0.33340 0.83330
+O atom ignored at 2.97677 0.66673 0.16663
+O atom ignored at 2.64343 3.00007 0.49997
+O atom ignored at 2.68990 0.66660 0.16670
+O atom ignored at 2.35657 0.99993 0.50003
+O atom ignored at 2.02323 0.33327 0.83337
+O atom ignored at 2.66660 0.97670 0.83330
+O atom ignored at 2.33327 0.31003 0.16663
+O atom ignored at 2.99993 0.64337 0.49997
+O atom ignored at 2.66660 0.68990 0.83330
+O atom ignored at 2.33327 0.02323 0.16663
+O atom ignored at 2.99993 0.35657 0.49997
+O atom ignored at 2.33340 0.02330 0.16670
+O atom ignored at 2.00007 0.35663 0.50003
+O atom ignored at 2.66673 0.68997 0.83337
+O atom ignored at 2.33340 0.31010 0.16670
+O atom ignored at 2.00007 0.64343 0.50003
+O atom ignored at 2.66673 0.97677 0.83337
+O atom ignored at 2.64337 0.64343 0.50003
+O atom ignored at 2.97670 0.31010 0.16670
+O atom ignored at 2.97670 0.66660 0.16670
+O atom ignored at 2.31003 0.97677 0.83337
+O atom ignored at 2.78697 0.21313 0.46483
+O atom ignored at 2.45363 0.54647 0.79817
+O atom ignored at 2.87970 0.75950 0.86850
+O atom ignored at 2.54637 0.09283 0.20183
+O atom ignored at 2.21303 0.42617 0.53517
+O atom ignored at 2.87970 0.12020 0.86850
+O atom ignored at 2.54637 0.45353 0.20183
+O atom ignored at 2.21303 0.78687 0.53517
+O atom ignored at 2.24050 0.12030 0.86850
+O atom ignored at 2.90717 0.45363 0.20183
+O atom ignored at 2.57383 0.78697 0.53517
+O atom ignored at 2.75950 0.87970 0.13150
+O atom ignored at 2.42617 0.21303 0.46483
+O atom ignored at 2.09283 0.54637 0.79817
+O atom ignored at 2.78697 0.57383 0.46483
+O atom ignored at 2.12030 0.24050 0.13150
+O atom ignored at 2.45363 0.90717 0.79817
+O atom ignored at 2.12030 0.87980 0.13150
+O atom ignored at 2.66667 0.07563 0.33333
+O atom ignored at 2.33333 0.40897 0.66667
+O atom ignored at 2.25770 3.00000 1.00000
+O atom ignored at 2.92437 0.33333 0.33333
+O atom ignored at 2.59103 0.66667 0.66667
+O atom ignored at 2.25770 0.25770 1.00000
+O atom ignored at 2.92437 0.59103 0.33333
+O atom ignored at 2.59103 0.92437 0.66667
+O atom ignored at 2.74230 3.00000 1.00000
+O atom ignored at 2.40897 0.33333 0.33333
+O atom ignored at 2.07563 0.66667 0.66667
+O atom ignored at 2.74230 0.74230 1.00000
+O atom ignored at 2.40897 0.07563 0.33333
+O atom ignored at 2.07563 0.40897 0.66667
+O atom ignored at 3.00000 0.25770 1.00000
+O atom ignored at 3.00000 0.74230 1.00000
+O atom ignored at 2.25770 1.00000 1.00000
+O atom ignored at 2.74230 1.00000 1.00000
+O atom ignored at 2.25770 3.00000 1.00000
+O atom ignored at 2.25770 0.25770 1.00000
+O atom ignored at 2.74230 3.00000 1.00000
+O atom ignored at 2.74230 0.74230 1.00000
+O atom ignored at 3.00000 0.25770 1.00000
+O atom ignored at 3.00000 0.74230 1.00000
+O atom ignored at 2.25770 1.00000 1.00000
+O atom ignored at 2.74230 1.00000 1.00000
+O atom ignored at 2.33333 0.92437 0.66667
+O atom ignored at 2.66667 0.59103 0.33333
+O atom ignored at 0.56867 1.13733 0.45603
+O atom ignored at 0.23533 1.47067 0.78937
+O atom ignored at 0.09800 1.90200 0.87730
+O atom ignored at 0.76467 1.23533 0.21063
+O atom ignored at 0.43133 1.56867 0.54397
+O atom ignored at 0.09800 1.19600 0.87730
+O atom ignored at 0.90200 1.80400 0.12270
+O atom ignored at 0.43133 1.86267 0.54397
+O atom ignored at 0.80400 1.90200 0.87730
+O atom ignored at 0.47067 1.23533 0.21063
+O atom ignored at 0.13733 1.56867 0.54397
+O atom ignored at 0.19600 1.09800 0.12270
+O atom ignored at 0.86267 1.43133 0.45603
+O atom ignored at 0.52933 1.76467 0.78937
+O atom ignored at 0.23533 1.76467 0.78937
+O atom ignored at 0.56867 1.43133 0.45603
+O atom ignored at 0.76467 1.52933 0.21063
+O atom ignored at 0.90200 1.09800 0.12270
+O atom ignored at 0.64337 1.99993 0.50003
+O atom ignored at 0.31003 1.33327 0.83337
+O atom ignored at 0.02330 1.68990 0.83330
+O atom ignored at 0.68997 1.02323 0.16663
+O atom ignored at 0.35663 1.35657 0.49997
+O atom ignored at 0.02330 1.33340 0.83330
+O atom ignored at 0.68997 1.66673 0.16663
+O atom ignored at 0.35663 1.00007 0.49997
+O atom ignored at 0.31010 1.33340 0.83330
+O atom ignored at 0.97677 1.66673 0.16663
+O atom ignored at 0.64343 1.00007 0.49997
+O atom ignored at 0.68990 1.66660 0.16670
+O atom ignored at 0.35657 1.99993 0.50003
+O atom ignored at 0.02323 1.33327 0.83337
+O atom ignored at 0.66660 1.97670 0.83330
+O atom ignored at 0.33327 1.31003 0.16663
+O atom ignored at 0.99993 1.64337 0.49997
+O atom ignored at 0.66660 1.68990 0.83330
+O atom ignored at 0.33327 1.02323 0.16663
+O atom ignored at 0.99993 1.35657 0.49997
+O atom ignored at 0.33340 1.02330 0.16670
+O atom ignored at 3.00007 1.35663 0.50003
+O atom ignored at 0.66673 1.68997 0.83337
+O atom ignored at 0.33340 1.31010 0.16670
+O atom ignored at 3.00007 1.64343 0.50003
+O atom ignored at 0.66673 1.97677 0.83337
+O atom ignored at 0.64337 1.64343 0.50003
+O atom ignored at 0.97670 1.31010 0.16670
+O atom ignored at 0.97670 1.66660 0.16670
+O atom ignored at 0.31003 1.97677 0.83337
+O atom ignored at 0.78697 1.21313 0.46483
+O atom ignored at 0.45363 1.54647 0.79817
+O atom ignored at 0.87970 1.75950 0.86850
+O atom ignored at 0.54637 1.09283 0.20183
+O atom ignored at 0.21303 1.42617 0.53517
+O atom ignored at 0.87970 1.12020 0.86850
+O atom ignored at 0.54637 1.45353 0.20183
+O atom ignored at 0.21303 1.78687 0.53517
+O atom ignored at 0.24050 1.12030 0.86850
+O atom ignored at 0.90717 1.45363 0.20183
+O atom ignored at 0.57383 1.78697 0.53517
+O atom ignored at 0.75950 1.87970 0.13150
+O atom ignored at 0.42617 1.21303 0.46483
+O atom ignored at 0.09283 1.54637 0.79817
+O atom ignored at 0.78697 1.57383 0.46483
+O atom ignored at 0.12030 1.24050 0.13150
+O atom ignored at 0.45363 1.90717 0.79817
+O atom ignored at 0.12030 1.87980 0.13150
+O atom ignored at 0.66667 1.07563 0.33333
+O atom ignored at 0.33333 1.40897 0.66667
+O atom ignored at 0.92437 1.33333 0.33333
+O atom ignored at 0.59103 1.66667 0.66667
+O atom ignored at 0.25770 1.25770 1.00000
+O atom ignored at 0.92437 1.59103 0.33333
+O atom ignored at 0.59103 1.92437 0.66667
+O atom ignored at 0.40897 1.33333 0.33333
+O atom ignored at 0.07563 1.66667 0.66667
+O atom ignored at 0.74230 1.74230 1.00000
+O atom ignored at 0.40897 1.07563 0.33333
+O atom ignored at 0.07563 1.40897 0.66667
+O atom ignored at 1.00000 1.25770 1.00000
+O atom ignored at 1.00000 1.74230 1.00000
+O atom ignored at 0.25770 2.00000 1.00000
+O atom ignored at 0.74230 2.00000 1.00000
+O atom ignored at 3.00000 1.25770 1.00000
+O atom ignored at 3.00000 1.74230 1.00000
+O atom ignored at 0.25770 1.25770 1.00000
+O atom ignored at 0.74230 1.74230 1.00000
+O atom ignored at 1.00000 1.25770 1.00000
+O atom ignored at 1.00000 1.74230 1.00000
+O atom ignored at 0.25770 2.00000 1.00000
+O atom ignored at 0.74230 2.00000 1.00000
+O atom ignored at 0.33333 1.92437 0.66667
+O atom ignored at 0.66667 1.59103 0.33333
+O atom ignored at 3.00000 1.25770 1.00000
+O atom ignored at 3.00000 1.74230 1.00000
+O atom ignored at 1.56867 1.13733 0.45603
+O atom ignored at 1.23533 1.47067 0.78937
+O atom ignored at 1.09800 1.90200 0.87730
+O atom ignored at 1.76467 1.23533 0.21063
+O atom ignored at 1.43133 1.56867 0.54397
+O atom ignored at 1.09800 1.19600 0.87730
+O atom ignored at 1.90200 1.80400 0.12270
+O atom ignored at 1.43133 1.86267 0.54397
+O atom ignored at 1.80400 1.90200 0.87730
+O atom ignored at 1.47067 1.23533 0.21063
+O atom ignored at 1.13733 1.56867 0.54397
+O atom ignored at 1.19600 1.09800 0.12270
+O atom ignored at 1.86267 1.43133 0.45603
+O atom ignored at 1.52933 1.76467 0.78937
+O atom ignored at 1.23533 1.76467 0.78937
+O atom ignored at 1.56867 1.43133 0.45603
+O atom ignored at 1.76467 1.52933 0.21063
+O atom ignored at 1.90200 1.09800 0.12270
+O atom ignored at 1.64337 1.99993 0.50003
+O atom ignored at 1.31003 1.33327 0.83337
+O atom ignored at 1.02330 1.68990 0.83330
+O atom ignored at 1.68997 1.02323 0.16663
+O atom ignored at 1.35663 1.35657 0.49997
+O atom ignored at 1.02330 1.33340 0.83330
+O atom ignored at 1.68997 1.66673 0.16663
+O atom ignored at 1.35663 1.00007 0.49997
+O atom ignored at 1.31010 1.33340 0.83330
+O atom ignored at 1.97677 1.66673 0.16663
+O atom ignored at 1.64343 1.00007 0.49997
+O atom ignored at 1.68990 1.66660 0.16670
+O atom ignored at 1.35657 1.99993 0.50003
+O atom ignored at 1.02323 1.33327 0.83337
+O atom ignored at 1.66660 1.97670 0.83330
+O atom ignored at 1.33327 1.31003 0.16663
+O atom ignored at 1.99993 1.64337 0.49997
+O atom ignored at 1.66660 1.68990 0.83330
+O atom ignored at 1.33327 1.02323 0.16663
+O atom ignored at 1.99993 1.35657 0.49997
+O atom ignored at 1.33340 1.02330 0.16670
+O atom ignored at 1.00007 1.35663 0.50003
+O atom ignored at 1.66673 1.68997 0.83337
+O atom ignored at 1.33340 1.31010 0.16670
+O atom ignored at 1.00007 1.64343 0.50003
+O atom ignored at 1.66673 1.97677 0.83337
+O atom ignored at 1.64337 1.64343 0.50003
+O atom ignored at 1.97670 1.31010 0.16670
+O atom ignored at 1.97670 1.66660 0.16670
+O atom ignored at 1.31003 1.97677 0.83337
+O atom ignored at 1.78697 1.21313 0.46483
+O atom ignored at 1.45363 1.54647 0.79817
+O atom ignored at 1.87970 1.75950 0.86850
+O atom ignored at 1.54637 1.09283 0.20183
+O atom ignored at 1.21303 1.42617 0.53517
+O atom ignored at 1.87970 1.12020 0.86850
+O atom ignored at 1.54637 1.45353 0.20183
+O atom ignored at 1.21303 1.78687 0.53517
+O atom ignored at 1.24050 1.12030 0.86850
+O atom ignored at 1.90717 1.45363 0.20183
+O atom ignored at 1.57383 1.78697 0.53517
+O atom ignored at 1.75950 1.87970 0.13150
+O atom ignored at 1.42617 1.21303 0.46483
+O atom ignored at 1.09283 1.54637 0.79817
+O atom ignored at 1.78697 1.57383 0.46483
+O atom ignored at 1.12030 1.24050 0.13150
+O atom ignored at 1.45363 1.90717 0.79817
+O atom ignored at 1.12030 1.87980 0.13150
+O atom ignored at 1.66667 1.07563 0.33333
+O atom ignored at 1.33333 1.40897 0.66667
+O atom ignored at 1.92437 1.33333 0.33333
+O atom ignored at 1.59103 1.66667 0.66667
+O atom ignored at 1.25770 1.25770 1.00000
+O atom ignored at 1.92437 1.59103 0.33333
+O atom ignored at 1.59103 1.92437 0.66667
+O atom ignored at 1.40897 1.33333 0.33333
+O atom ignored at 1.07563 1.66667 0.66667
+O atom ignored at 1.74230 1.74230 1.00000
+O atom ignored at 1.40897 1.07563 0.33333
+O atom ignored at 1.07563 1.40897 0.66667
+O atom ignored at 2.00000 1.25770 1.00000
+O atom ignored at 2.00000 1.74230 1.00000
+O atom ignored at 1.25770 2.00000 1.00000
+O atom ignored at 1.74230 2.00000 1.00000
+O atom ignored at 1.25770 1.25770 1.00000
+O atom ignored at 1.74230 1.74230 1.00000
+O atom ignored at 2.00000 1.25770 1.00000
+O atom ignored at 2.00000 1.74230 1.00000
+O atom ignored at 1.25770 2.00000 1.00000
+O atom ignored at 1.74230 2.00000 1.00000
+O atom ignored at 1.33333 1.92437 0.66667
+O atom ignored at 1.66667 1.59103 0.33333
+O atom ignored at 2.56867 1.13733 0.45603
+O atom ignored at 2.23533 1.47067 0.78937
+O atom ignored at 2.09800 1.90200 0.87730
+O atom ignored at 2.76467 1.23533 0.21063
+O atom ignored at 2.43133 1.56867 0.54397
+O atom ignored at 2.09800 1.19600 0.87730
+O atom ignored at 2.90200 1.80400 0.12270
+O atom ignored at 2.43133 1.86267 0.54397
+O atom ignored at 2.80400 1.90200 0.87730
+O atom ignored at 2.47067 1.23533 0.21063
+O atom ignored at 2.13733 1.56867 0.54397
+O atom ignored at 2.19600 1.09800 0.12270
+O atom ignored at 2.86267 1.43133 0.45603
+O atom ignored at 2.52933 1.76467 0.78937
+O atom ignored at 2.23533 1.76467 0.78937
+O atom ignored at 2.56867 1.43133 0.45603
+O atom ignored at 2.76467 1.52933 0.21063
+O atom ignored at 2.90200 1.09800 0.12270
+O atom ignored at 2.64337 1.99993 0.50003
+O atom ignored at 2.31003 1.33327 0.83337
+O atom ignored at 2.02330 1.68990 0.83330
+O atom ignored at 2.68997 1.02323 0.16663
+O atom ignored at 2.35663 1.35657 0.49997
+O atom ignored at 2.02330 1.33340 0.83330
+O atom ignored at 2.68997 1.66673 0.16663
+O atom ignored at 2.35663 1.00007 0.49997
+O atom ignored at 2.31010 1.33340 0.83330
+O atom ignored at 2.97677 1.66673 0.16663
+O atom ignored at 2.64343 1.00007 0.49997
+O atom ignored at 2.68990 1.66660 0.16670
+O atom ignored at 2.35657 1.99993 0.50003
+O atom ignored at 2.02323 1.33327 0.83337
+O atom ignored at 2.66660 1.97670 0.83330
+O atom ignored at 2.33327 1.31003 0.16663
+O atom ignored at 2.99993 1.64337 0.49997
+O atom ignored at 2.66660 1.68990 0.83330
+O atom ignored at 2.33327 1.02323 0.16663
+O atom ignored at 2.99993 1.35657 0.49997
+O atom ignored at 2.33340 1.02330 0.16670
+O atom ignored at 2.00007 1.35663 0.50003
+O atom ignored at 2.66673 1.68997 0.83337
+O atom ignored at 2.33340 1.31010 0.16670
+O atom ignored at 2.00007 1.64343 0.50003
+O atom ignored at 2.66673 1.97677 0.83337
+O atom ignored at 2.64337 1.64343 0.50003
+O atom ignored at 2.97670 1.31010 0.16670
+O atom ignored at 2.97670 1.66660 0.16670
+O atom ignored at 2.31003 1.97677 0.83337
+O atom ignored at 2.78697 1.21313 0.46483
+O atom ignored at 2.45363 1.54647 0.79817
+O atom ignored at 2.87970 1.75950 0.86850
+O atom ignored at 2.54637 1.09283 0.20183
+O atom ignored at 2.21303 1.42617 0.53517
+O atom ignored at 2.87970 1.12020 0.86850
+O atom ignored at 2.54637 1.45353 0.20183
+O atom ignored at 2.21303 1.78687 0.53517
+O atom ignored at 2.24050 1.12030 0.86850
+O atom ignored at 2.90717 1.45363 0.20183
+O atom ignored at 2.57383 1.78697 0.53517
+O atom ignored at 2.75950 1.87970 0.13150
+O atom ignored at 2.42617 1.21303 0.46483
+O atom ignored at 2.09283 1.54637 0.79817
+O atom ignored at 2.78697 1.57383 0.46483
+O atom ignored at 2.12030 1.24050 0.13150
+O atom ignored at 2.45363 1.90717 0.79817
+O atom ignored at 2.12030 1.87980 0.13150
+O atom ignored at 2.66667 1.07563 0.33333
+O atom ignored at 2.33333 1.40897 0.66667
+O atom ignored at 2.92437 1.33333 0.33333
+O atom ignored at 2.59103 1.66667 0.66667
+O atom ignored at 2.25770 1.25770 1.00000
+O atom ignored at 2.92437 1.59103 0.33333
+O atom ignored at 2.59103 1.92437 0.66667
+O atom ignored at 2.40897 1.33333 0.33333
+O atom ignored at 2.07563 1.66667 0.66667
+O atom ignored at 2.74230 1.74230 1.00000
+O atom ignored at 2.40897 1.07563 0.33333
+O atom ignored at 2.07563 1.40897 0.66667
+O atom ignored at 3.00000 1.25770 1.00000
+O atom ignored at 3.00000 1.74230 1.00000
+O atom ignored at 2.25770 2.00000 1.00000
+O atom ignored at 2.74230 2.00000 1.00000
+O atom ignored at 2.25770 1.25770 1.00000
+O atom ignored at 2.74230 1.74230 1.00000
+O atom ignored at 3.00000 1.25770 1.00000
+O atom ignored at 3.00000 1.74230 1.00000
+O atom ignored at 2.25770 2.00000 1.00000
+O atom ignored at 2.74230 2.00000 1.00000
+O atom ignored at 2.33333 1.92437 0.66667
+O atom ignored at 2.66667 1.59103 0.33333
+O atom ignored at 0.56867 2.13733 0.45603
+O atom ignored at 0.23533 2.47067 0.78937
+O atom ignored at 0.09800 2.90200 0.87730
+O atom ignored at 0.76467 2.23533 0.21063
+O atom ignored at 0.43133 2.56867 0.54397
+O atom ignored at 0.09800 2.19600 0.87730
+O atom ignored at 0.90200 2.80400 0.12270
+O atom ignored at 0.43133 2.86267 0.54397
+O atom ignored at 0.80400 2.90200 0.87730
+O atom ignored at 0.47067 2.23533 0.21063
+O atom ignored at 0.13733 2.56867 0.54397
+O atom ignored at 0.19600 2.09800 0.12270
+O atom ignored at 0.86267 2.43133 0.45603
+O atom ignored at 0.52933 2.76467 0.78937
+O atom ignored at 0.23533 2.76467 0.78937
+O atom ignored at 0.56867 2.43133 0.45603
+O atom ignored at 0.76467 2.52933 0.21063
+O atom ignored at 0.90200 2.09800 0.12270
+O atom ignored at 0.64337 2.99993 0.50003
+O atom ignored at 0.31003 2.33327 0.83337
+O atom ignored at 0.02330 2.68990 0.83330
+O atom ignored at 0.68997 2.02323 0.16663
+O atom ignored at 0.35663 2.35657 0.49997
+O atom ignored at 0.02330 2.33340 0.83330
+O atom ignored at 0.68997 2.66673 0.16663
+O atom ignored at 0.35663 2.00007 0.49997
+O atom ignored at 0.31010 2.33340 0.83330
+O atom ignored at 0.97677 2.66673 0.16663
+O atom ignored at 0.64343 2.00007 0.49997
+O atom ignored at 0.68990 2.66660 0.16670
+O atom ignored at 0.35657 2.99993 0.50003
+O atom ignored at 0.02323 2.33327 0.83337
+O atom ignored at 0.66660 2.97670 0.83330
+O atom ignored at 0.33327 2.31003 0.16663
+O atom ignored at 0.99993 2.64337 0.49997
+O atom ignored at 0.66660 2.68990 0.83330
+O atom ignored at 0.33327 2.02323 0.16663
+O atom ignored at 0.99993 2.35657 0.49997
+O atom ignored at 0.33340 2.02330 0.16670
+O atom ignored at 3.00007 2.35663 0.50003
+O atom ignored at 0.66673 2.68997 0.83337
+O atom ignored at 0.33340 2.31010 0.16670
+O atom ignored at 3.00007 2.64343 0.50003
+O atom ignored at 0.66673 2.97677 0.83337
+O atom ignored at 0.64337 2.64343 0.50003
+O atom ignored at 0.97670 2.31010 0.16670
+O atom ignored at 0.97670 2.66660 0.16670
+O atom ignored at 0.31003 2.97677 0.83337
+O atom ignored at 0.78697 2.21313 0.46483
+O atom ignored at 0.45363 2.54647 0.79817
+O atom ignored at 0.87970 2.75950 0.86850
+O atom ignored at 0.54637 2.09283 0.20183
+O atom ignored at 0.21303 2.42617 0.53517
+O atom ignored at 0.87970 2.12020 0.86850
+O atom ignored at 0.54637 2.45353 0.20183
+O atom ignored at 0.21303 2.78687 0.53517
+O atom ignored at 0.24050 2.12030 0.86850
+O atom ignored at 0.90717 2.45363 0.20183
+O atom ignored at 0.57383 2.78697 0.53517
+O atom ignored at 0.75950 2.87970 0.13150
+O atom ignored at 0.42617 2.21303 0.46483
+O atom ignored at 0.09283 2.54637 0.79817
+O atom ignored at 0.78697 2.57383 0.46483
+O atom ignored at 0.12030 2.24050 0.13150
+O atom ignored at 0.45363 2.90717 0.79817
+O atom ignored at 0.12030 2.87980 0.13150
+O atom ignored at 0.66667 2.07563 0.33333
+O atom ignored at 0.33333 2.40897 0.66667
+O atom ignored at 0.92437 2.33333 0.33333
+O atom ignored at 0.59103 2.66667 0.66667
+O atom ignored at 0.25770 2.25770 1.00000
+O atom ignored at 0.92437 2.59103 0.33333
+O atom ignored at 0.59103 2.92437 0.66667
+O atom ignored at 0.40897 2.33333 0.33333
+O atom ignored at 0.07563 2.66667 0.66667
+O atom ignored at 0.74230 2.74230 1.00000
+O atom ignored at 0.40897 2.07563 0.33333
+O atom ignored at 0.07563 2.40897 0.66667
+O atom ignored at 1.00000 2.25770 1.00000
+O atom ignored at 1.00000 2.74230 1.00000
+O atom ignored at 0.25770 3.00000 1.00000
+O atom ignored at 0.74230 3.00000 1.00000
+O atom ignored at 3.00000 2.25770 1.00000
+O atom ignored at 3.00000 2.74230 1.00000
+O atom ignored at 0.25770 2.25770 1.00000
+O atom ignored at 0.74230 2.74230 1.00000
+O atom ignored at 1.00000 2.25770 1.00000
+O atom ignored at 1.00000 2.74230 1.00000
+O atom ignored at 0.25770 3.00000 1.00000
+O atom ignored at 0.74230 3.00000 1.00000
+O atom ignored at 0.33333 2.92437 0.66667
+O atom ignored at 0.66667 2.59103 0.33333
+O atom ignored at 3.00000 2.25770 1.00000
+O atom ignored at 3.00000 2.74230 1.00000
+O atom ignored at 1.56867 2.13733 0.45603
+O atom ignored at 1.23533 2.47067 0.78937
+O atom ignored at 1.09800 2.90200 0.87730
+O atom ignored at 1.76467 2.23533 0.21063
+O atom ignored at 1.43133 2.56867 0.54397
+O atom ignored at 1.09800 2.19600 0.87730
+O atom ignored at 1.90200 2.80400 0.12270
+O atom ignored at 1.43133 2.86267 0.54397
+O atom ignored at 1.80400 2.90200 0.87730
+O atom ignored at 1.47067 2.23533 0.21063
+O atom ignored at 1.13733 2.56867 0.54397
+O atom ignored at 1.19600 2.09800 0.12270
+O atom ignored at 1.86267 2.43133 0.45603
+O atom ignored at 1.52933 2.76467 0.78937
+O atom ignored at 1.23533 2.76467 0.78937
+O atom ignored at 1.56867 2.43133 0.45603
+O atom ignored at 1.76467 2.52933 0.21063
+O atom ignored at 1.90200 2.09800 0.12270
+O atom ignored at 1.64337 2.99993 0.50003
+O atom ignored at 1.31003 2.33327 0.83337
+O atom ignored at 1.02330 2.68990 0.83330
+O atom ignored at 1.68997 2.02323 0.16663
+O atom ignored at 1.35663 2.35657 0.49997
+O atom ignored at 1.02330 2.33340 0.83330
+O atom ignored at 1.68997 2.66673 0.16663
+O atom ignored at 1.35663 2.00007 0.49997
+O atom ignored at 1.31010 2.33340 0.83330
+O atom ignored at 1.97677 2.66673 0.16663
+O atom ignored at 1.64343 2.00007 0.49997
+O atom ignored at 1.68990 2.66660 0.16670
+O atom ignored at 1.35657 2.99993 0.50003
+O atom ignored at 1.02323 2.33327 0.83337
+O atom ignored at 1.66660 2.97670 0.83330
+O atom ignored at 1.33327 2.31003 0.16663
+O atom ignored at 1.99993 2.64337 0.49997
+O atom ignored at 1.66660 2.68990 0.83330
+O atom ignored at 1.33327 2.02323 0.16663
+O atom ignored at 1.99993 2.35657 0.49997
+O atom ignored at 1.33340 2.02330 0.16670
+O atom ignored at 1.00007 2.35663 0.50003
+O atom ignored at 1.66673 2.68997 0.83337
+O atom ignored at 1.33340 2.31010 0.16670
+O atom ignored at 1.00007 2.64343 0.50003
+O atom ignored at 1.66673 2.97677 0.83337
+O atom ignored at 1.64337 2.64343 0.50003
+O atom ignored at 1.97670 2.31010 0.16670
+O atom ignored at 1.97670 2.66660 0.16670
+O atom ignored at 1.31003 2.97677 0.83337
+O atom ignored at 1.78697 2.21313 0.46483
+O atom ignored at 1.45363 2.54647 0.79817
+O atom ignored at 1.87970 2.75950 0.86850
+O atom ignored at 1.54637 2.09283 0.20183
+O atom ignored at 1.21303 2.42617 0.53517
+O atom ignored at 1.87970 2.12020 0.86850
+O atom ignored at 1.54637 2.45353 0.20183
+O atom ignored at 1.21303 2.78687 0.53517
+O atom ignored at 1.24050 2.12030 0.86850
+O atom ignored at 1.90717 2.45363 0.20183
+O atom ignored at 1.57383 2.78697 0.53517
+O atom ignored at 1.75950 2.87970 0.13150
+O atom ignored at 1.42617 2.21303 0.46483
+O atom ignored at 1.09283 2.54637 0.79817
+O atom ignored at 1.78697 2.57383 0.46483
+O atom ignored at 1.12030 2.24050 0.13150
+O atom ignored at 1.45363 2.90717 0.79817
+O atom ignored at 1.12030 2.87980 0.13150
+O atom ignored at 1.66667 2.07563 0.33333
+O atom ignored at 1.33333 2.40897 0.66667
+O atom ignored at 1.92437 2.33333 0.33333
+O atom ignored at 1.59103 2.66667 0.66667
+O atom ignored at 1.25770 2.25770 1.00000
+O atom ignored at 1.92437 2.59103 0.33333
+O atom ignored at 1.59103 2.92437 0.66667
+O atom ignored at 1.40897 2.33333 0.33333
+O atom ignored at 1.07563 2.66667 0.66667
+O atom ignored at 1.74230 2.74230 1.00000
+O atom ignored at 1.40897 2.07563 0.33333
+O atom ignored at 1.07563 2.40897 0.66667
+O atom ignored at 2.00000 2.25770 1.00000
+O atom ignored at 2.00000 2.74230 1.00000
+O atom ignored at 1.25770 3.00000 1.00000
+O atom ignored at 1.74230 3.00000 1.00000
+O atom ignored at 1.25770 2.25770 1.00000
+O atom ignored at 1.74230 2.74230 1.00000
+O atom ignored at 2.00000 2.25770 1.00000
+O atom ignored at 2.00000 2.74230 1.00000
+O atom ignored at 1.25770 3.00000 1.00000
+O atom ignored at 1.74230 3.00000 1.00000
+O atom ignored at 1.33333 2.92437 0.66667
+O atom ignored at 1.66667 2.59103 0.33333
+O atom ignored at 2.56867 2.13733 0.45603
+O atom ignored at 2.23533 2.47067 0.78937
+O atom ignored at 2.09800 2.90200 0.87730
+O atom ignored at 2.76467 2.23533 0.21063
+O atom ignored at 2.43133 2.56867 0.54397
+O atom ignored at 2.09800 2.19600 0.87730
+O atom ignored at 2.90200 2.80400 0.12270
+O atom ignored at 2.43133 2.86267 0.54397
+O atom ignored at 2.80400 2.90200 0.87730
+O atom ignored at 2.47067 2.23533 0.21063
+O atom ignored at 2.13733 2.56867 0.54397
+O atom ignored at 2.19600 2.09800 0.12270
+O atom ignored at 2.86267 2.43133 0.45603
+O atom ignored at 2.52933 2.76467 0.78937
+O atom ignored at 2.23533 2.76467 0.78937
+O atom ignored at 2.56867 2.43133 0.45603
+O atom ignored at 2.76467 2.52933 0.21063
+O atom ignored at 2.90200 2.09800 0.12270
+O atom ignored at 2.64337 2.99993 0.50003
+O atom ignored at 2.31003 2.33327 0.83337
+O atom ignored at 2.02330 2.68990 0.83330
+O atom ignored at 2.68997 2.02323 0.16663
+O atom ignored at 2.35663 2.35657 0.49997
+O atom ignored at 2.02330 2.33340 0.83330
+O atom ignored at 2.68997 2.66673 0.16663
+O atom ignored at 2.35663 2.00007 0.49997
+O atom ignored at 2.31010 2.33340 0.83330
+O atom ignored at 2.97677 2.66673 0.16663
+O atom ignored at 2.64343 2.00007 0.49997
+O atom ignored at 2.68990 2.66660 0.16670
+O atom ignored at 2.35657 2.99993 0.50003
+O atom ignored at 2.02323 2.33327 0.83337
+O atom ignored at 2.66660 2.97670 0.83330
+O atom ignored at 2.33327 2.31003 0.16663
+O atom ignored at 2.99993 2.64337 0.49997
+O atom ignored at 2.66660 2.68990 0.83330
+O atom ignored at 2.33327 2.02323 0.16663
+O atom ignored at 2.99993 2.35657 0.49997
+O atom ignored at 2.33340 2.02330 0.16670
+O atom ignored at 2.00007 2.35663 0.50003
+O atom ignored at 2.66673 2.68997 0.83337
+O atom ignored at 2.33340 2.31010 0.16670
+O atom ignored at 2.00007 2.64343 0.50003
+O atom ignored at 2.66673 2.97677 0.83337
+O atom ignored at 2.64337 2.64343 0.50003
+O atom ignored at 2.97670 2.31010 0.16670
+O atom ignored at 2.97670 2.66660 0.16670
+O atom ignored at 2.31003 2.97677 0.83337
+O atom ignored at 2.78697 2.21313 0.46483
+O atom ignored at 2.45363 2.54647 0.79817
+O atom ignored at 2.87970 2.75950 0.86850
+O atom ignored at 2.54637 2.09283 0.20183
+O atom ignored at 2.21303 2.42617 0.53517
+O atom ignored at 2.87970 2.12020 0.86850
+O atom ignored at 2.54637 2.45353 0.20183
+O atom ignored at 2.21303 2.78687 0.53517
+O atom ignored at 2.24050 2.12030 0.86850
+O atom ignored at 2.90717 2.45363 0.20183
+O atom ignored at 2.57383 2.78697 0.53517
+O atom ignored at 2.75950 2.87970 0.13150
+O atom ignored at 2.42617 2.21303 0.46483
+O atom ignored at 2.09283 2.54637 0.79817
+O atom ignored at 2.78697 2.57383 0.46483
+O atom ignored at 2.12030 2.24050 0.13150
+O atom ignored at 2.45363 2.90717 0.79817
+O atom ignored at 2.12030 2.87980 0.13150
+O atom ignored at 2.66667 2.07563 0.33333
+O atom ignored at 2.33333 2.40897 0.66667
+O atom ignored at 2.92437 2.33333 0.33333
+O atom ignored at 2.59103 2.66667 0.66667
+O atom ignored at 2.25770 2.25770 1.00000
+O atom ignored at 2.92437 2.59103 0.33333
+O atom ignored at 2.59103 2.92437 0.66667
+O atom ignored at 2.40897 2.33333 0.33333
+O atom ignored at 2.07563 2.66667 0.66667
+O atom ignored at 2.74230 2.74230 1.00000
+O atom ignored at 2.40897 2.07563 0.33333
+O atom ignored at 2.07563 2.40897 0.66667
+O atom ignored at 3.00000 2.25770 1.00000
+O atom ignored at 3.00000 2.74230 1.00000
+O atom ignored at 2.25770 3.00000 1.00000
+O atom ignored at 2.74230 3.00000 1.00000
+O atom ignored at 2.25770 2.25770 1.00000
+O atom ignored at 2.74230 2.74230 1.00000
+O atom ignored at 3.00000 2.25770 1.00000
+O atom ignored at 3.00000 2.74230 1.00000
+O atom ignored at 2.25770 3.00000 1.00000
+O atom ignored at 2.74230 3.00000 1.00000
+O atom ignored at 2.33333 2.92437 0.66667
+O atom ignored at 2.66667 2.59103 0.33333
