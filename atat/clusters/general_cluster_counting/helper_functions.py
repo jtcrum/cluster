@@ -145,6 +145,17 @@ def find_df_index_from_site_index(df, site_index):
     '''
     return df[df['site_index'] == site_index].index[0]
 
+def find_max_uvw_from_cluster_frac(axes_abc, cluster):
+    urange = []
+    vrange = []
+    wrange = []
+    for site in cluster:
+        u, v, w = frac_to_uvw(axes_abc, site)
+        urange.append(u)
+        vrange.append(v)
+        wrange.append(w)
+    return [int(np.max(urange)//1)+1, int(np.max(vrange)//1)+1, int(np.max(wrange)//1)+1]
+
 def translate_frac_into_structure(frac_coor, structure):
     '''
     translate the point into the structure by subtracting multiple structure vector on each dimension
@@ -163,6 +174,34 @@ def translate_frac_into_structure(frac_coor, structure):
 
     return np.dot(np.array((fu, fv, fw)), axes_abc)
 
+def translate_cluster_to_cell_frac(cluster, axes_abc):
+    '''
+    translate a cluster in space
+    make the min(u), min(v) and min(w) in the cluster within the lattice unit cell
+    '''
+    if not cluster:
+        return [], [], [], []
+    utemp = []
+    vtemp = []
+    wtemp = []
+    for site in cluster:
+        u, v, w = frac_to_uvw(axes_abc, site)
+        utemp.append(u)
+        vtemp.append(v)
+        wtemp.append(w)
+    umin = int(np.min(utemp)//1)
+    vmin = int(np.min(vtemp)//1)
+    wmin = int(np.min(wtemp)//1)
+    utemp = [u-umin for u in utemp]
+    vtemp = [v-vmin for v in vtemp]
+    wtemp = [w-wmin for w in wtemp]
+
+    #print(utemp, vtemp, wtemp)
+    cluster_new = []
+    for i in range(len(cluster)):
+        site = uvw_to_frac(axes_abc, [utemp[i],vtemp[i],wtemp[i]])
+        cluster_new.append(site)
+    return utemp, vtemp, wtemp, cluster_new
 
 def add_xyz(df, axes_xyz):
     '''
@@ -171,6 +210,15 @@ def add_xyz(df, axes_xyz):
     df['x'] = df.apply(lambda row: frac_to_xyz(axes_xyz, [row.a, row.b, row.c])[0], axis=1)
     df['y'] = df.apply(lambda row: frac_to_xyz(axes_xyz, [row.a, row.b, row.c])[1], axis=1)
     df['z'] = df.apply(lambda row: frac_to_xyz(axes_xyz, [row.a, row.b, row.c])[2], axis=1)
+    return
+
+def add_uvw(df, axes_abc):
+    '''
+    function to add columns of x, y and z for a dataframe with fractional(abc) coordinates
+    '''
+    df['u'] = df.apply(lambda row: frac_to_uvw(axes_abc, [row.a, row.b, row.c])[0], axis=1)
+    df['v'] = df.apply(lambda row: frac_to_uvw(axes_abc, [row.a, row.b, row.c])[1], axis=1)
+    df['w'] = df.apply(lambda row: frac_to_uvw(axes_abc, [row.a, row.b, row.c])[2], axis=1)
     return
 
 def extend_sites(orig_sites, orig_vec, ext_ranges):
@@ -201,19 +249,19 @@ def extend_sites(orig_sites, orig_vec, ext_ranges):
 
     return ext_sites
 
-
-def visualize_str_no_rep(vis_sites_df, str_vec, xyz_file_path, png_file_path=''):
+def visualize_str_no_rep(vis_sites_df, str_vec, xyz_file_path, png_file_path='', uvwmax=[100,100,100]):
     '''
-    function to create xyz-file and pnd-file to visulaize a specific cluster
+    function to create xyz-file and pnd-file to visualize a specific cluster
     the structure configuration is not repeated in the space
     '''
     filepath = xyz_file_path
     if os.path.isfile(filepath):
         os.remove(filepath)
     with open(filepath, 'a') as file:
-        file.write('{}\n'.format(len(vis_sites_df)))
+        df = vis_sites_df[(vis_sites_df.u < uvwmax[0]) & (vis_sites_df.v < uvwmax[1]) & (vis_sites_df.w < uvwmax[2])]
+        file.write('{}\n'.format(len(df)))
         file.write('\n')
-        for index, row in vis_sites_df.iterrows():
+        for index, row in df.iterrows():
             file.write('{} {} {} {}\n'.format(row.atom.split(',')[int(str_vec[index])],row.x, row.y, row.z))
 
     if png_file_path:
@@ -221,18 +269,19 @@ def visualize_str_no_rep(vis_sites_df, str_vec, xyz_file_path, png_file_path='')
         write(png_file_path, c, format=None, parallel=True)
     return
 
-def visualize_str_rep(structure, str_sites_df, str_vec, xyz_file_path, png_file_path=''):
+def visualize_str_rep(structure, str_sites_df, str_vec, xyz_file_path, png_file_path='',uvwmax=[100,100,100]):
     '''
-    function to create xyz-file and pnd-file to visulaize a specific cluster
+    function to create xyz-file and pnd-file to visualize a specific cluster
     the structure configuration is repeated in the space
     '''
     filepath = xyz_file_path
     if os.path.isfile(filepath):
         os.remove(filepath)
     with open(filepath, 'a') as file:
-        file.write('{}\n'.format(len(str_sites_df)))
+        df = str_sites_df[(str_sites_df.u < uvwmax[0]) & (str_sites_df.v < uvwmax[1]) & (str_sites_df.w < uvwmax[1])]
+        file.write('{}\n'.format(len(df)))
         file.write('\n')
-        for index, row in str_sites_df.iterrows():
+        for index, row in df.iterrows():
             #print(row.site_index)
             df_index = find_df_index_from_site_index(structure['str_sites'], row.site_index)
             #print(df_index)
@@ -278,6 +327,7 @@ def read_lat_in(filepath):
         site.append(atom_type)
         lattice_sites = lattice_sites.append(pd.DataFrame([site], columns=['a', 'b', 'c', 'atom']))
     lattice_sites = lattice_sites.apply(pd.to_numeric, errors = 'ignore')
+    lattice_sites= lattice_sites[~((lattice_sites.a >= 1) | (lattice_sites.b >= 1) | (lattice_sites.c >= 1) | (lattice_sites.a < 0) | (lattice_sites.b < 0) | (lattice_sites.c <0))]
     lattice_sites['multi_atoms']=lattice_sites['atom'].str.contains(',')
     lattice_sites.reset_index(drop=True, inplace=True)
     add_site_index(lattice_sites)
@@ -343,27 +393,36 @@ def break_down_cluster_out_lines(cluster_out_lines, lattice):
         lat_clusters[cluster_type] = {}
         lat_clusters[cluster_type]['m'] = m
         lat_clusters[cluster_type]['max_d'] = d
-        lat_clusters[cluster_type]['eg_pair_frac']=[]
 
         i = i+3
-        for j in range(nsite):
-            site = cluster_out_lines[i][:3]
-            u, v, w = frac_to_uvw(axes_abc, site)
-            urange.append(u)
-            vrange.append(v)
-            wrange.append(w)
-            #print(site)
-            lat_clusters[cluster_type]['eg_pair_frac'].append(site)
-            i += 1
-        lat_clusters['type_number'][nsite] = cluster_index
 
-    u_vis_range = list(range(int(min(urange))-1, int(max(urange))))
-    v_vis_range = list(range(int(min(vrange))-1, int(max(vrange))))
-    w_vis_range = list(range(int(min(wrange))-1, int(max(wrange))))
+        #print(nsite)
+        cluster = []
+        for j in range(nsite):
+            #print(i)
+            site = cluster_out_lines[i][:3]
+            #print(site)
+            cluster.append(site)
+            i += 1
+        #print(cluster)
+
+        utemp, vtemp, wtemp, cluster_temp = translate_cluster_to_cell_frac(cluster, lattice_axes_abc(lattice))
+        urange.extend(utemp)
+        vrange.extend(vtemp)
+        wrange.extend(wtemp)
+        #print(cluster_type, utemp, vtemp, wtemp)
+        lat_clusters[cluster_type]['eg_pair_frac'] = cluster_temp
+
+        lat_clusters['type_number'][nsite] = cluster_index
+    #print(urange, vrange, wrange)
+    u_vis_range = list(range(int(min(urange)//1), int(max(urange)//1)+1))
+    v_vis_range = list(range(int(min(vrange)//1), int(max(vrange)//1)+1))
+    w_vis_range = list(range(int(min(wrange)//1), int(max(wrange)//1)+1))
     lat_clusters['vis_range'] = [u_vis_range, v_vis_range, w_vis_range]
 
     lat_vis_sites = extend_sites(lattice['sites'], axes_abc, lat_clusters['vis_range'])
     add_xyz(lat_vis_sites,lattice_axes_xyz(lattice))
+    add_uvw(lat_vis_sites,lattice_axes_abc(lattice))
     lat_clusters['lat_vis_sites'] = lat_vis_sites
 
     lat_clusters['cluster_types'] = []
@@ -375,9 +434,6 @@ def break_down_cluster_out_lines(cluster_out_lines, lattice):
             lat_clusters['cluster_types'].append(cluster_type)
 
     return lat_clusters
-
-
-#file = open('str_dim.txt', 'r')
 
 def read_str_dim(filepath, lattice):
     '''
@@ -398,6 +454,7 @@ def read_str_dim(filepath, lattice):
     str_sites = extend_sites(lattice['sites'], lattice_axes_abc(lattice), str_ranges)
     add_site_index(str_sites)
     add_xyz(str_sites, lattice_axes_xyz(lattice))
+    add_uvw(str_sites, structure_axes_abc(lattice))
 
     structure = {}
     structure['lattice_a'] = lattice['a']
@@ -481,17 +538,14 @@ def break_down_cluster_list(str_clusters, structure):
         #read n_site
         new_nsite = str_clusters['cluster_orig_list'][i]
         i += 1
-
         #pass first three lines where the cluster contains 0 site
         if (new_nsite == 0):
             i+=2
             continue
-
         #if the cluster has more sites than the previous cluster, reset nsite and cluster index
         if (new_nsite != nsite):
             nsite = new_nsite
             cluster_index = 1
-
         #set the cluster type = [nsite]-[order of the specific cluster in all nsite-clusters].
         cluster_type = str(nsite)+'-'+str(cluster_index)
 
@@ -506,22 +560,26 @@ def break_down_cluster_list(str_clusters, structure):
         n_cluster = int(multiplicity *structure['ncell'])
 
         for j in range(n_cluster):
-            cluster = []
+            cluster_xyz = []
+            cluster_frac = []
             for k in range(nsite):
                 point = []
-                for element in str_clusters['cluster_orig_list'][i]:
-                    point.append(float(element))
+                for coor in str_clusters['cluster_orig_list'][i]:
+                    point.append(float(coor))
                 #print(point)
-                u, v, w = frac_to_uvw(structure_axes_abc(structure), xyz_to_frac(structure_axes_xyz(structure),point))
-
-                #print(u,v,w)
-                urange.append(u)
-                vrange.append(v)
-                wrange.append(w)
-                cluster.append(point)
-                i += 1
-            temp.append(cluster)
-
+                point_frac = xyz_to_frac(structure_axes_xyz(structure),point)
+                cluster_frac.append(point_frac)
+                i+=1
+            #print(cluster_frac)
+            utemp, vtemp, wtemp, cluster_frac_temp = translate_cluster_to_cell_frac(cluster_frac, structure_axes_abc(structure))
+            urange.extend(utemp)
+            vrange.extend(vtemp)
+            wrange.extend(wtemp)
+            #print(cluster_frac_temp, utemp, vtemp, wtemp)
+            for point in cluster_frac_temp:
+                cluster_xyz.append(frac_to_xyz(structure_axes_xyz(structure), point))
+            temp.append(cluster_xyz)
+            #print(cluster_xyz)
         #pass the line with correlation
         i += 1
 
@@ -530,11 +588,14 @@ def break_down_cluster_list(str_clusters, structure):
 
         #count cluster types
         cluster_index += 1
-
-    str_clusters['mult_vis_range'] = [list(range(int(min(urange))-1, int(max(urange)))),list(range(int(min(vrange))-1, int(max(vrange)))),list(range(int(min(wrange))-1, int(max(wrange))))]
+    u_vis_range = list(range(int(min(urange)//1), int(max(urange)//1)+1))
+    v_vis_range = list(range(int(min(vrange)//1), int(max(vrange)//1)+1))
+    w_vis_range = list(range(int(min(wrange)//1), int(max(wrange)//1)+1))
+    str_clusters['mult_vis_range'] = [u_vis_range, v_vis_range, w_vis_range]
 
     str_clusters['str_vis_sites'] = extend_sites(structure['str_sites'],structure_axes_abc(structure),str_clusters['mult_vis_range'])
     add_xyz(str_clusters['str_vis_sites'],structure_axes_xyz(structure))
+    add_uvw(str_clusters['str_vis_sites'],structure_axes_abc(structure))
 
     return
 
@@ -550,27 +611,29 @@ def visualize_structure_one_cluster_type_one_example(str_clusters, structure, fo
         str_vec_rep = [0 for i in range(len(structure['str_sites']))]
 
         sites = str_clusters[cluster_type][example_num-1]
-
+        sites_frac = []
         for site in sites:
             site_index = find_site_index_xyz(site,str_clusters['str_vis_sites'])
             #print(site_index)
-
             df_index = find_df_index_from_site_index(structure['str_sites'], site_index)
             #print(df_index)
             str_vec_rep[df_index] = 1
 
             df_index = find_df_index_xyz(site,str_clusters['str_vis_sites'])
             str_vec_no_rep[df_index] = 1
-
+            sites_frac.append(xyz_to_frac(structure_axes_xyz(structure), site))
+        #print(sites_frac)
+        uvwmax = find_max_uvw_from_cluster_frac(structure_axes_abc(structure), sites_frac)
+        #print(uvwmax)
         if rep == '' or rep =='n':
             xyz_path = folder_path+'/structure_clusters_no_rep/xyzs/cluster-{}-{}.xyz'.format(cluster_type,example_num, example_num)
             png_path = folder_path+'/structure_clusters_no_rep/images/cluster-{}-{}.png'.format(cluster_type,example_num, example_num)
-            visualize_str_no_rep(str_clusters['str_vis_sites'], str_vec_no_rep, xyz_path, png_path)
+            visualize_str_no_rep(str_clusters['str_vis_sites'], str_vec_no_rep, xyz_path, png_path, uvwmax)
 
         if rep == '' or rep =='y':
             xyz_path = folder_path+'/structure_clusters_rep/xyzs/cluster-{}-{}.xyz'.format(cluster_type,example_num, example_num)
             png_path = folder_path+'/structure_clusters_rep/images/cluster-{}-{}.png'.format(cluster_type,example_num, example_num)
-            visualize_str_rep(structure, str_clusters['str_vis_sites'],str_vec_rep, xyz_path, png_path)
+            visualize_str_rep(structure, str_clusters['str_vis_sites'],str_vec_rep, xyz_path, png_path, uvwmax)
 
     else:
         print('Error! No cluster type meets requirements')
@@ -651,8 +714,7 @@ def add_pair_sites(structure, str_clusters):
             continue
         for k in range(1, ncluster+1):
             cluster_type = '{}-{}'.format(nsite,k)
-            structure['str_sites'][cluster_type] = ""
-            structure['str_sites'][cluster_type].astype('str')
+            structure['str_sites'][cluster_type] = [defaultdict(int) for _ in range(len(structure['str_sites']))]
             for cluster in str_clusters[cluster_type+'-site_index']:
                 for i, site_index in enumerate(cluster):
                     #print(cluster)
@@ -660,10 +722,7 @@ def add_pair_sites(structure, str_clusters):
                     sites_res = deepcopy(cluster[:i])
                     sites_res.extend(deepcopy(cluster[i+1:]))
                     #print(sites_res)
-                    if (structure['str_sites'].iloc[df_index][cluster_type] == ''):
-                        structure['str_sites'].set_value(df_index, cluster_type, set([frozenset(sites_res)]))
-                    else:
-                        structure['str_sites'].iloc[df_index][cluster_type].update([frozenset(sites_res)])
+                    structure['str_sites'].iloc[df_index][cluster_type][frozenset(sites_res)] += 1
     return
 
 def count_clusters_str_config(str_vec, structure, str_clusters, counting_types=[], excluding_types=[]):
@@ -705,7 +764,7 @@ def count_clusters_str_config(str_vec, structure, str_clusters, counting_types=[
         counting_results[clutype] = count
     return counting_results
 
-def cal_penalty(str_vec, structure, str_clusters, penalty):
+def cal_penalty_str_config(str_vec, structure, str_clusters, penalty):
     '''
     function to calculate the penalty for a structure configuration
     '''
@@ -716,12 +775,52 @@ def cal_penalty(str_vec, structure, str_clusters, penalty):
         p += count_results[key]*value
     return p
 
+def count_clusters_one_site(site_df_index, str_vec, structure, str_clusters, counting_types=[]):
+    '''
+    function to count clusters for one site based on the structure configuration
+    '''
+    if counting_types==[]:
+        counting_types=str_clusters['cluster_types']
+    counting_results = defaultdict(int)
+    for clutype in counting_types:
+        count = 0
+        for cluster in structure['str_sites'].iloc[site_df_index][clutype].keys():
+            exist = 1
+            for site in list(cluster):
+                df_index = find_df_index_from_site_index(structure['str_sites'], site)
+                if str_vec[df_index] == 0:
+                    exist = 0
+                    break
+            if exist == 1:
+                count+=structure['str_sites'].iloc[site_df_index][clutype][cluster]
+        counting_results[clutype] = count
+    return counting_results
+
+def cal_penalty_difference(str_vec, Al_df_index, Si_df_index, structure, str_clusters, penalty):
+    '''
+    function to calculate the penalty difference for one swap
+    '''
+    p_Al = 0
+    count_results = count_clusters_one_site(Al_df_index, str_vec, structure, str_clusters, list(penalty.keys()))
+    for key, value in penalty.items():
+        #print(count_results[key])
+        p_Al += count_results[key]*value
+    p_Si = 0
+    str_vec_temp = deepcopy(str_vec)
+    str_vec_temp[Al_df_index] = 0
+    str_vec_temp[Si_df_index] = 1
+    count_results = count_clusters_one_site(Si_df_index, str_vec_temp, structure, str_clusters, list(penalty.keys()))
+    for key, value in penalty.items():
+        #print(count_results[key])
+        p_Si += count_results[key]*value
+    return p_Si - p_Al
+
 def random_config_swap(structure, str_clusters, atom_num, penalty, vis=0, folder_path='', max_try = 100):
     '''
-    function to generate random structure random_configuration with Monte Carlo swap sites algorithm
+    function to generate random structure configuration with Monte Carlo swap sites algorithm
     '''
     if vis:
-        i = 0
+        i = 1
         while os.path.isfile(folder_path+'/random_config_process/xyzs/select-{}.xyz'.format(i)):
             os.remove(folder_path+'/random_config_process/xyzs/select-{}.xyz'.format(i))
             os.remove(folder_path+'/random_config_process/images/select-{}.png'.format(i))
@@ -732,7 +831,6 @@ def random_config_swap(structure, str_clusters, atom_num, penalty, vis=0, folder
             os.remove(folder_path+'/random_config_process/images/swap-{}.png'.format(i))
             i+=1
     t = 0
-    n_swap = 0
     available_sites = list(structure['str_sites'][structure['str_sites']['multi_atoms']==True].index)
 
     selected_sites = set(random.sample(available_sites, atom_num))
@@ -740,61 +838,55 @@ def random_config_swap(structure, str_clusters, atom_num, penalty, vis=0, folder
 
     str_vec = [1 if i in selected_sites else 0 for i, row in structure['str_sites'].iterrows()]
     #print(len(str_vec))
-    p = cal_penalty(str_vec, structure, str_clusters, penalty)
-    #print(p)
 
     if vis:
-        xyz_path = folder_path+'/random_config_process/xyzs/{}.xyz'.format(n_swap)
-        png_path = folder_path+'/random_config_process/images/{}.png'.format(n_swap)
+        xyz_path = folder_path+'/random_config_process/xyzs/swap-{}.xyz'.format(t)
+        png_path = folder_path+'/random_config_process/images/swap-{}.png'.format(t)
         visualize_str_rep(structure, structure['str_sites'], str_vec, xyz_path, png_path)
 
-    while (t < max_try) and (p != 0):
+    while (t < max_try):
         #print(t)
         t += 1
-        s_temp = random.sample(selected_sites, 1)[0]
-        u_temp = random.sample(unselected_sites, 1)[0]
+        Al_temp = random.sample(selected_sites, 1)[0]
+        Si_temp = random.sample(unselected_sites, 1)[0]
         #print(selected_sites)
         #print(s_temp)
         str_vec_temp = deepcopy(str_vec)
-        #print(str_vec_temp)
-        str_vec_temp[s_temp] = 0
-        str_vec_temp[u_temp] = 1
-        p_temp = cal_penalty(str_vec_temp, structure, str_clusters, penalty)
-
-        if p_temp < p:
-            #print(n_swap)
-            n_swap += 1
+        str_vec_temp[Al_temp] = 0
+        str_vec_temp[Si_temp] = 1
+        delta_p = cal_penalty_difference(str_vec, Al_temp, Si_temp, structure, str_clusters, penalty)
+        print(delta_p)
+        if delta_p <= 0:
+            #print('swap')
             #print(p_temp)
-            selected_sites.remove(s_temp)
-            selected_sites.add(u_temp)
-            unselected_sites.remove(u_temp)
-            unselected_sites.add(s_temp)
-            p = p_temp
+            selected_sites.remove(Al_temp)
+            selected_sites.add(Si_temp)
+            unselected_sites.remove(Si_temp)
+            unselected_sites.add(Al_temp)
             str_vec=deepcopy(str_vec_temp)
             #print(str_vec)
             if vis:
-                xyz_path = folder_path+'/random_config_process/xyzs/{}.xyz'.format(n_swap)
-                png_path = folder_path+'/random_config_process/images/{}.png'.format(n_swap)
+                xyz_path = folder_path+'/random_config_process/xyzs/swap-{}.xyz'.format(t)
+                png_path = folder_path+'/random_config_process/images/swap-{}.png'.format(t)
                 visualize_str_rep(structure, structure['str_sites'], str_vec, xyz_path, png_path)
-
-        elif p_temp == p:
+        else:
             #print(selected_sites)
             #print(s_temp)
-            if random.uniform(0, 1) < 0.5:
-                #print(n_swap)
-                n_swap += 1
-                #print(p_temp)
-                selected_sites.remove(s_temp)
-                selected_sites.add(u_temp)
-                unselected_sites.remove(u_temp)
-                unselected_sites.add(s_temp)
-                p = p_temp
+            if random.uniform(0, 1) < exp(-delta_p*2):
+                #print('swap')
+                #print(delta_p)
+                selected_sites.remove(Al_temp)
+                selected_sites.add(Si_temp)
+                unselected_sites.remove(Si_temp)
+                unselected_sites.add(Al_temp)
                 str_vec=deepcopy(str_vec_temp)
                 #print(str_vec)
-                if vis:
-                    xyz_path = folder_path+'/random_config_process/xyzs/{}.xyz'.format(n_swap)
-                    png_path = folder_path+'/random_config_process/images/{}.png'.format(n_swap)
-                    visualize_str_rep(structure, structure['str_sites'], str_vec, xyz_path, png_path)
+            #else:
+                #print('not swap')
+            if vis:
+                xyz_path = folder_path+'/random_config_process/xyzs/swap-{}.xyz'.format(t)
+                png_path = folder_path+'/random_config_process/images/swap-{}.png'.format(t)
+                visualize_str_rep(structure, structure['str_sites'], str_vec, xyz_path, png_path)
     return str_vec
 
 def random_config_hybrid(structure, str_clusters, atom_num, penalty, vis=0, folder_path='', max_try = 100):
@@ -802,42 +894,54 @@ def random_config_hybrid(structure, str_clusters, atom_num, penalty, vis=0, fold
     function to generate random structure random_configuration with a hybrid algorithm
     '''
     if vis:
-        i = 0
+        i = 1
         while os.path.isfile(folder_path+'/random_config_process/xyzs/select-{}.xyz'.format(i)):
             os.remove(folder_path+'/random_config_process/xyzs/select-{}.xyz'.format(i))
             os.remove(folder_path+'/random_config_process/images/select-{}.png'.format(i))
             i+=1
-        i = 0
+        i = 1
         while os.path.isfile(folder_path+'/random_config_process/xyzs/swap-{}.xyz'.format(i)):
             os.remove(folder_path+'/random_config_process/xyzs/swap-{}.xyz'.format(i))
             os.remove(folder_path+'/random_config_process/images/swap-{}.png'.format(i))
             i+=1
 
-    available_sites = set(structure['str_sites'][structure['str_sites']['multi_atoms']==True].index)
+    available_site_df_indices = set(structure['str_sites'][structure['str_sites']['multi_atoms']==True].index)
     str_vec = [0 for i in range(len(structure['str_sites'].index))]
     selected_sites = set()
     atom_count = 0
 
-    while((atom_count < atom_num) & (len(available_sites) > 0)):
+    while((atom_count < atom_num) & (len(available_site_df_indices) > 0)):
         #random select one site from all the available sites
-        site = random.sample(available_sites, 1)[0]
+        site_df_index = random.sample(available_site_df_indices, 1)[0]
 
         #add selected site to the list
-        selected_sites.add(site)
-        str_vec[site] = 1
+        selected_sites.add(site_df_index)
+        str_vec[site_df_index] = 1
 
         #find out the  sites for the selected site
-        #print(site)
+        #print(site_df_index)
         no_coexist_sites = set()
+        temp = set()
         for t in penalty.keys():
-            temp = [[int(y) for y in structure['str_sites'][structure['str_sites']['site_index'] == list(x)[0]].index] for x in structure['str_sites'].iloc[site][t]]
-            for s in temp:
-                no_coexist_sites.update(s)
+            groups = list(structure['str_sites'].iloc[site_df_index][t].keys())
+            for group in groups:
+                if len(group) == 1:
+                    for s in group:
+                        no_coexist_sites.update(structure['str_sites'][structure['str_sites']['site_index'] ==s].index)
+                else:
+                    for s in group:
+                        temp.update(structure['str_sites'][structure['str_sites']['site_index'] == s].index)
+        for s in temp:
+            count_result = count_clusters_one_site(s, str_vec, structure, str_clusters, counting_types=penalty.keys())
+            for t in count_result.keys():
+                if count_result[t] > 0:
+                    no_coexist_sites.add(s)
+                    continue
         #print(no_coexist_sites)
 
         #remove the selected site and the coresponding bad sites from available sites
-        available_sites.remove(site)
-        available_sites = available_sites.difference(no_coexist_sites)
+        available_site_df_indices.remove(site_df_index)
+        available_site_df_indices = available_site_df_indices.difference(no_coexist_sites)
         #print(available_sites)
 
         atom_count += 1
@@ -852,10 +956,10 @@ def random_config_hybrid(structure, str_clusters, atom_num, penalty, vis=0, fold
 
     t = 0
     n_swap = 0
-    available_sites = list(structure['str_sites'][structure['str_sites']['multi_atoms']==True].index)
-    temp = random.sample(list(set(available_sites).difference(selected_sites)), atom_num-len(selected_sites))
+    available_site_df_indices = list(structure['str_sites'][structure['str_sites']['multi_atoms']==True].index)
+    temp = random.sample(list(set(available_site_df_indices).difference(selected_sites)), atom_num-len(selected_sites))
     selected_sites.update(temp)
-    unselected_sites = set(available_sites) - set(selected_sites)
+    unselected_sites = set(available_site_df_indices) - set(selected_sites)
 
     str_vec = [1 if i in selected_sites else 0 for i, row in structure['str_sites'].iterrows()]
     #print(len(str_vec))
