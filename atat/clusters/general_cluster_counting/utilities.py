@@ -50,6 +50,7 @@ def find_site_index_frac(frac, df):
         return np.nan
     elif len(site_index) < 1:
         print("Error! Find multiple site indices in the structure.")
+        print(site_index)
         return np.nan
     else:
         return site_index[0]

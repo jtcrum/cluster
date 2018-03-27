@@ -24,8 +24,9 @@ class Lattice:
     def __init__(self, folder_path):
         '''
         function to intialize a Lattice object by reading the lat.in file.
+        folder_path: the folder that includes lat.in file
         '''
-        #oepn lat.in file
+        #find lat.in file
         self.folder_path = folder_path
         filepath=folder_path+'/lat.in'
         file = open(filepath, 'r')
@@ -62,9 +63,21 @@ class Lattice:
         self.axes_xyz = np.array((avec,bvec,cvec))
         #add uvw coordinates and xyz coordiantes for all sites
         add_uvw(self.sites, self.axes_abc)
-        add_xyz(self.sites, self.axes_xyz)
         #only keep the sites within one unit cell defined by u, v, w vectors.
-        self.sites= self.sites[~((self.sites.u >= 1) | (self.sites.v >= 1) | (self.sites.w >= 1) | (self.sites.u < 0) | (self.sites.v < 0) | (self.sites.w <0))]
+        #self.sites= self.sites[~((self.sites.u >= 1) | (self.sites.v >= 1) | (self.sites.w >= 1) | (self.sites.u < 0) | (self.sites.v < 0) | (self.sites.w <0))]
+        # self.sites['utemp']=self.sites['u']//1
+        # self.sites['vtemp']=self.sites['v']//1
+        # self.sites['wtemp']=self.sites['w']//1
+        # self.sites['u'] = self.sites['u'] - self.sites['utemp']
+        # self.sites['v'] = self.sites['v'] - self.sites['vtemp']
+        # self.sites['w'] = self.sites['w'] - self.sites['wtemp']
+        # self.sites['a'] = self.sites['a'] - self.sites['utemp']*self.u[0] - self.sites['vtemp']*self.v[0] - self.sites['wtemp']*self.w[0]
+        # self.sites['b'] = self.sites['b'] - self.sites['utemp']*self.u[1] - self.sites['vtemp']*self.v[1] - self.sites['wtemp']*self.w[1]
+        # self.sites['c'] = self.sites['c'] - self.sites['utemp']*self.u[2] - self.sites['vtemp']*self.v[2] - self.sites['wtemp']*self.w[2]
+        # self.sites.drop(['utemp','vtemp','wtemp'], axis=1, inplace=True)
+        # self.sites = self.sites.round(6)
+        # self.sites.drop_duplicates(inplace=True)
+        add_xyz(self.sites, self.axes_xyz)
         #add a column records whether each site can have multiple atoms or not in the dataframe
         self.sites['multi_atoms']=self.sites['atom'].str.contains(',')
         self.sites.reset_index(drop=True, inplace=True)
@@ -74,6 +87,7 @@ class Lattice:
     def read_clusters_out(self):
         '''
         function to add the cluster infomation from cluster.out file
+        cluster.out file should be saved in the same folder with lat.in file
         '''
         cluster_out_lines = []
         #read clusters.out line by line
@@ -153,6 +167,10 @@ class Lattice:
 
     def visualize_cluster(self, cluster_type=['no_cluster']):
         str_vec = [0 for i in range(len(self.vis_sites.index))]
+        if not os.path.exists(self.folder_path+'/lattice_clusters/'):
+            os.makedirs(self.folder_path+'/lattice_clusters/')
+            os.makedirs(self.folder_path+'/lattice_clusters/xyzs/')
+            os.makedirs(self.folder_path+'/lattice_clusters/images/')
         if cluster_type == ['no_cluster']:
             xyz_filepath = self.folder_path+'/lattice_clusters/xyzs/no_cluster.xyz'
             png_filepath = self.folder_path+'/lattice_clusters/images/no_cluster.png'
@@ -162,9 +180,10 @@ class Lattice:
             for site in sites:
                 index = find_df_index_frac(site, self.vis_sites)
                 str_vec[index] = 1
+            uvwmax = find_max_uvw_from_cluster_frac(self.axes_abc, sites)
             xyz_filepath = self.folder_path+'/lattice_clusters/xyzs/cluster-{}.xyz'.format(cluster_type)
             png_filepath = self.folder_path+'/lattice_clusters/images/cluster-{}.png'.format(cluster_type)
-            visualize_str_no_rep(self.vis_sites, str_vec, xyz_filepath, png_filepath)
+            visualize_str_no_rep(self.vis_sites, str_vec, xyz_filepath, png_filepath, uvwmax)
         return
 
 class Structure:
@@ -310,21 +329,28 @@ class Structure:
         add_uvw(self.vis_sites,self.axes_abc)
         #create a dictionary for the site indices of each cluster for all cluster types and add pair sites for each site for each cluster type
         self.clusters_indices = {}
+        self.sites['1'] = [0 for _ in range(len(self.sites))]
         for cluster_type in self.cluster_types:
-            self.sites[cluster_type] = [defaultdict(int) for _ in range(len(self.sites))]
             cluster_indices = []
-            for cluster in self.clusters_xyz[cluster_type]:
-                site_indices = []
-                for site in cluster:
-                    site_index = find_site_index_xyz(site, self.vis_sites)
-                    site_indices.append(site_index)
-                for i, site_index in enumerate(site_indices):
+            if cluster_type.split('-')[0] == '1':
+                for cluster in self.clusters_xyz[cluster_type]:
+                    site_index = find_site_index_xyz(cluster[0], self.vis_sites)
                     df_index = find_df_index_from_site_index(site_index, self.sites)
-                    sites_res = deepcopy(site_indices[:i])
-                    sites_res.extend(deepcopy(site_indices[i+1:]))
-                    self.sites.iloc[df_index][cluster_type][frozenset(sites_res)] += 1
-                cluster_indices.append(site_indices)
-
+                    self.sites.loc[self.sites.index == df_index, '1'] = cluster_type.split('-')[1]
+                    cluster_indices.append([site_index])
+            else:
+                self.sites[cluster_type] = [defaultdict(int) for _ in range(len(self.sites))]
+                for cluster in self.clusters_xyz[cluster_type]:
+                    site_indices = []
+                    for site in cluster:
+                        site_index = find_site_index_xyz(site, self.vis_sites)
+                        site_indices.append(site_index)
+                    for i, site_index in enumerate(site_indices):
+                        df_index = find_df_index_from_site_index(site_index, self.sites)
+                        sites_res = deepcopy(site_indices[:i])
+                        sites_res.extend(deepcopy(site_indices[i+1:]))
+                        self.sites.iloc[df_index][cluster_type][frozenset(sites_res)] += 1
+                    cluster_indices.append(site_indices)
             self.clusters_indices[cluster_type] = cluster_indices
         return
 
@@ -348,11 +374,19 @@ class Structure:
                 str_vec_no_rep[vis_sites_df_index] = 1
             uvwmax = find_max_uvw_from_cluster_frac(self.axes_abc, sites_frac)
             if rep == '' or rep =='n':
+                if not os.path.exists(self.folder_path+'/structure_clusters_no_rep/'):
+                    os.makedirs(self.folder_path+'/structure_clusters_no_rep/')
+                    os.makedirs(self.folder_path+'/structure_clusters_no_rep/images/')
+                    os.makedirs(self.folder_path+'/structure_clusters_no_rep/xyzs/')
                 xyz_path = self.folder_path+'/structure_clusters_no_rep/xyzs/cluster-{}-{}.xyz'.format(cluster_type,example_num)
                 png_path = self.folder_path+'/structure_clusters_no_rep/images/cluster-{}-{}.png'.format(cluster_type,example_num)
                 visualize_str_no_rep(self.vis_sites, str_vec_no_rep, xyz_path, png_path, uvwmax)
 
             if rep == '' or rep =='y':
+                if not os.path.exists(self.folder_path+'/structure_clusters_rep/'):
+                    os.makedirs(self.folder_path+'/structure_clusters_rep/')
+                    os.makedirs(self.folder_path+'/structure_clusters_rep/xyzs/')
+                    os.makedirs(self.folder_path+'/structure_clusters_rep/images/')
                 xyz_path = self.folder_path+'/structure_clusters_rep/xyzs/cluster-{}-{}.xyz'.format(cluster_type,example_num)
                 png_path = self.folder_path+'/structure_clusters_rep/images/cluster-{}-{}.png'.format(cluster_type,example_num)
                 visualize_str_rep(self.sites, self.vis_sites, str_vec_rep, xyz_path, png_path, uvwmax)
@@ -380,12 +414,20 @@ class Structure:
 
     def visualize_all_sites(self, rep=''):
         if rep=='' or rep=='y':
+            if not os.path.exists(self.folder_path+'/structure_clusters_rep/'):
+                os.makedirs(self.folder_path+'/structure_clusters_rep/')
+                os.makedirs(self.folder_path+'/structure_clusters_rep/xyzs/')
+                os.makedirs(self.folder_path+'/structure_clusters_rep/images/')
             xyz_path = self.folder_path+'/structure_clusters_rep/xyzs/all_sites.xyz'
             png_path = self.folder_path+'/structure_clusters_rep/images/all_sites.png'
             str_vec = [0 for i in range(len(self.sites.index))]
             visualize_str_rep(self.sites, self.vis_sites, str_vec, xyz_path, png_path)
 
         if rep=='' or rep=='n':
+            if not os.path.exists(self.folder_path+'/structure_clusters_no_rep/'):
+                os.makedirs(self.folder_path+'/structure_clusters_no_rep/')
+                os.makedirs(self.folder_path+'/structure_clusters_no_rep/xyzs')
+                os.makedirs(self.folder_path+'/structure_clusters_no_rep/images')
             xyz_path = self.folder_path+'/structure_clusters_no_rep/xyzs/all_sites.xyz'
             png_path = self.folder_path+'/structure_clusters_no_rep/images/all_sites.png'
             str_vec = [0 for i in range(len(self.vis_sites.index)) ]
@@ -481,6 +523,8 @@ class Structure:
         '''
         function to calculate the penalty for a structure configuration
         '''
+        if len(penalty.keys())==0:
+            return 0
         count_results = self.count_clusters_str_config(str_vec, counting_types = list(penalty.keys()))
         total_p = 0
         for cluster_type, p in penalty.items():
@@ -491,6 +535,8 @@ class Structure:
         '''
         function to calculate the penalty difference for the swap between one selected site and one unselected site
         '''
+        if len(penalty.keys())==0:
+            return 0
         total_delta_p = 0
         count_results_selected = self.count_clusters_one_site(selected_df_index, str_vec, counting_types = list(penalty.keys()))
         #create a temporary structure vector represents the configuration after swap
@@ -502,66 +548,96 @@ class Structure:
             total_delta_p += (count_results_unselected[cluster_type] - count_results_selected[cluster_type])*p
         return total_delta_p
 
-    def random_config_swap(self, atom_num, penalty, factor=2, num_vecs=1, num_step = 100, burn_in_period=10, vis=0, ptime=0):
+    def random_config_swap(self, atom_num, penalty={}, prob={}, num_vecs=1, num_step=100, vis=0, process=0, ptfile=''):
         '''
         function to generate random structure configurations with Monte Carlo swap sites algorithm
         '''
         #remove previous configurations
         if vis:
+            if not os.path.exists(self.folder_path+'/random_config_process/'):
+                os.makedirs(self.folder_path+'/random_config_process/')
+                os.makedirs(self.folder_path+'/random_config_process/xyzs')
+                os.makedirs(self.folder_path+'/random_config_process/images')
             os.system("rm {}/random_config_process/xyzs/swap-*.xyz".format(self.folder_path))
             os.system("rm {}/random_config_process/images/swap-*.png".format(self.folder_path))
         str_vecs = []
-        selected_vecs = random.sample(list(range(burn_in_period+1, num_step+1)), num_vecs)
-        step = 0
-        #create a list of available sites
-        available_sites = list(self.sites[self.sites['multi_atoms']==True].index)
-        #randomly selected atom_num sites
-        selected_sites = set(random.sample(available_sites, atom_num))
-        unselected_sites = set(available_sites) - set(selected_sites)
-        #create a structure vector for the randomly selected configuration
-        str_vec = [1 if i in selected_sites else 0 for i, row in self.sites.iterrows()]
-        p = self.cal_penalty_str_config(str_vec, penalty)
-        #start swapping
-        if ptime:
-            starttime = time.time()
-            pfile = 'ps_{}.txt'.format(factor)
-            timefile = 'time_{}.txt'.format(factor)
-        while (step < num_step):
-            step += 1
-            s_index = random.sample(selected_sites, 1)[0]
-            us_index = random.sample(unselected_sites, 1)[0]
-            delta_p = self.cal_penalty_difference(str_vec, s_index, us_index, penalty)
-            #if penalty decreases or doesn't change, swap the atoms on the two sites
-            if delta_p <= 0:
-                selected_sites.remove(s_index)
-                selected_sites.add(us_index)
-                unselected_sites.remove(us_index)
-                unselected_sites.add(s_index)
-                str_vec[s_index] = 0
-                str_vec[us_index] = 1
-                p += delta_p
-            #if penalty increases, the probability to swap follows the Boltzmann distribution
-            else:
-                if random.uniform(0, 1) < exp(-delta_p*factor):
-                    selected_sites.remove(s_index)
-                    selected_sites.add(us_index)
-                    unselected_sites.remove(us_index)
-                    unselected_sites.add(s_index)
+        if ptfile:
+            if not os.path.exists(self.folder_path+'/random_config_process/'):
+                os.makedirs(self.folder_path+'/random_config_process/')
+            os.system("rm {}/random_config_process/*.txt".format(self.folder_path))
+        for i in range(num_vecs):
+            step = 0
+            #create lists of different groups of available sites
+            available_sites = {}
+            for t in prob.keys():
+                available_sites[t] = list(self.sites[self.sites['1']==t].index)
+            available_sites['others'] = list(self.sites[(~self.sites['1'].isin(prob.keys())) & (self.sites['multi_atoms']==True)].index)
+            #randomly selected atom_num sites
+            selected_sites = {}
+            groups = []
+            group_probs = []
+            num_others = atom_num
+            for t, p in prob.items():
+                num = int(round(atom_num*p))
+                num_others -= num
+                selected_sites[t] = set(random.sample(available_sites[t], num))
+                groups.append(t)
+                group_probs.append(num/atom_num)
+            selected_sites['others'] = set(random.sample(available_sites['others'], num_others))
+            groups.append('others')
+            group_probs.append(num_others/atom_num)
+            unselected_sites = {}
+            for t, p in prob.items():
+                unselected_sites[t] = set(available_sites[t]) - set(selected_sites[t])
+            unselected_sites['others'] = set(available_sites['others']) - set(selected_sites['others'])
+            #create a structure vector for the randomly selected configuration
+            str_vec = [1 if i in set().union(*selected_sites.values()) else 0 for i, row in self.sites.iterrows()]
+            p = self.cal_penalty_str_config(str_vec, penalty)
+            #start swapping
+            if ptfile:
+                starttime = time.time()
+                pfile = '{}/random_config_process/{}_ps.txt'.format(self.folder_path,i+1)
+                timefile = '{}/random_config_process/{}_time.txt'.format(self.folder_path,i+1)
+            while (step < num_step):
+                step += 1
+                group = np.random.choice(groups, 1,p=group_probs)[0]
+                s_index = random.sample(selected_sites[group], 1)[0]
+                us_index = random.sample(unselected_sites[group], 1)[0]
+                delta_p = self.cal_penalty_difference(str_vec, s_index, us_index, penalty)
+                #if penalty decreases or doesn't change, swap the atoms on the two sites
+                if delta_p <= 0:
+                    selected_sites[group].remove(s_index)
+                    selected_sites[group].add(us_index)
+                    unselected_sites[group].remove(us_index)
+                    unselected_sites[group].add(s_index)
                     str_vec[s_index] = 0
                     str_vec[us_index] = 1
                     p += delta_p
-            if step in selected_vecs:
-                if vis:
-                    xyz_path = self.folder_path+'/random_config_process/xyzs/swap-{}.xyz'.format(step)
-                    png_path = self.folder_path+'/random_config_process/images/swap-{}.png'.format(step)
-                    visualize_str_rep(self.sites, self.sites, str_vec, xyz_path, png_path)
-                str_vec_temp = deepcopy(str_vec)
-                str_vecs.append(str_vec_temp)
-            if ptime:
-                with open(pfile, 'a') as f:
-                    f.write('{}\n'.format(p))
-                with open(timefile, 'a') as f:
-                    f.write('{}\n'.format(time.time()-starttime))
+                #if penalty increases, the probability to swap follows the Boltzmann distribution
+                else:
+                    if random.uniform(0, 1) < exp(-delta_p):
+                        selected_sites[group].remove(s_index)
+                        selected_sites[group].add(us_index)
+                        unselected_sites[group].remove(us_index)
+                        unselected_sites[group].add(s_index)
+                        str_vec[s_index] = 0
+                        str_vec[us_index] = 1
+                        p += delta_p
+                if process:
+                    if vis:
+                        xyz_path = self.folder_path+'/random_config_process/xyzs/swap-{}-{}.xyz'.format(i+1, step)
+                        png_path = self.folder_path+'/random_config_process/images/swap-{}-{}.png'.format(i+1, step)
+                        visualize_str_rep(self.sites, self.sites, str_vec, xyz_path, png_path)
+                if ptfile:
+                    with open(pfile, 'a') as f:
+                        f.write('{}\n'.format(p))
+                    with open(timefile, 'a') as f:
+                        f.write('{}\n'.format(time.time()-starttime))
+            str_vecs.append(str_vec)
+            if vis:
+                xyz_path = self.folder_path+'/random_config_process/xyzs/swap-{}-final.xyz'.format(i+1)
+                png_path = self.folder_path+'/random_config_process/images/swap-{}-final.png'.format(i+1)
+                visualize_str_rep(self.sites, self.sites, str_vec, xyz_path, png_path)
         return str_vecs
 
     def random_config_select(self, atom_num, penalty, num_vecs=1, vis=0):
@@ -570,6 +646,11 @@ class Structure:
         '''
         #remove previous configurations
         str_vecs = []
+        if vis:
+            if not os.path.exists(self.folder_path+'/random_config_process/'):
+                os.makedirs(self.folder_path+'/random_config_process/')
+                os.makedirs(self.folder_path+'/random_config_process/xyzs')
+                os.makedirs(self.folder_path+'/random_config_process/images')
         for i in range(num_vecs):
             if vis:
                 os.system("rm {}/random_config_process/xyzs/select-*.xyz".format(self.folder_path))
@@ -689,23 +770,39 @@ class Structure:
                         exist_clusters_set.remove(cluster)
         return result, str_vec_titration
 
-    def titrate_config_multi_groups(self, str_vec, titration_groups=[[]], excluding_types=[], titrate_num=1):
+    def titrate_config_multi_groups(self, str_vec, titration_groups=[[]], excluding_types=[], titrate_num=1, hist=0):
         '''
         function to titrate consecutively multiple group of clusters for one structure configuration
         '''
+        cluster_types=reduce(lambda x,y: x+y,titration_groups)
         titration_results = defaultdict(lambda: [])
         for i in range(titrate_num):
             result = defaultdict(lambda: 0)
             str_vec_temp = deepcopy(str_vec)
             for titration_group in titration_groups:
                 result_temp, str_vec_temp = self.titrate_config_one_group(str_vec_temp,titration_types=titration_group, excluding_types=excluding_types)
-                for key in set(result.keys()).union(set(result_temp.keys())):
-                    result[key] += result_temp[key]
-            for cluster_type in self.cluster_types:
+                for key in result_temp.keys():
+                    result[key] = result_temp[key]
+            for cluster_type in cluster_types:
                 titration_results[cluster_type].append(result[cluster_type])
-        return titration_results
+        if hist==0:
+            for cluster_type in cluster_types:
+                titration_results[cluster_type]=[np.mean(titration_results[cluster_type])]
+        return dict(titration_results)
 
-    def titrate_clusters_multi_configs(self, str_vecs, titration_groups=[[]], excluding_types=[], titrate_num=1):
+    def titrate_clusters_multi_configs(self, str_vecs, titration_groups=[[]], excluding_types=[], titrate_num=1, hist=0):
+        '''
+        function to titrate clusters for a specific composition
+        '''
+        cluster_types=reduce(lambda x,y: x+y,titration_groups)
+        titration_results = defaultdict(lambda: [])
+        for str_vec in str_vecs:
+            result = self.titrate_config_multi_groups(str_vec, titration_groups=titration_groups, excluding_types=excluding_types, titrate_num=titrate_num, hist=hist)
+            for cluster_type in cluster_types:
+                titration_results[cluster_type].append(result[cluster_type])
+        return dict(titration_results)
+
+    def titrate_clusters_multi_configs_titrate_hist(self, str_vecs, titration_groups=[[]], excluding_types=[], titrate_num=1):
         '''
         function to titrate clusters for a specific composition
         '''
@@ -713,5 +810,5 @@ class Structure:
         for str_vec in str_vecs:
             result = self.titrate_config_multi_groups(str_vec, titration_groups=titration_groups, excluding_types=excluding_types, titrate_num=titrate_num)
             for cluster_type in self.cluster_types:
-                titration_results[cluster_type].append(np.mean(result[cluster_type]))
+                titration_results[cluster_type].append(result[cluster_type])
         return titration_results
