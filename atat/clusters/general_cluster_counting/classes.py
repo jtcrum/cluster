@@ -166,6 +166,9 @@ class Lattice:
         return
 
     def visualize_cluster(self, cluster_type=['no_cluster']):
+        '''
+        function to visualize cluster examples in lattice
+        '''
         str_vec = [0 for i in range(len(self.vis_sites.index))]
         if not os.path.exists(self.folder_path+'/lattice_clusters/'):
             os.makedirs(self.folder_path+'/lattice_clusters/')
@@ -228,7 +231,7 @@ class Structure:
 
     def prepare_str_out(self):
         '''
-        function to prepare str.out file for the structure
+        function to prepare str.out file for corrdump to generate full cluster list
         '''
         filepath = self.folder_path+'/str.out'
         if os.path.isfile(filepath):
@@ -243,7 +246,11 @@ class Structure:
         return
 
     def read_cluster_list(self):
-        #read cluster list line by line
+        '''
+        function to read cluster list line by line
+        cluster_list.csv should be saved in the same folder with lat.in file
+        store the fractional coordinates, xyz coordinates and site indecis for all the clusters within a super cell for each cluster type
+        '''
         self.clulist = []
         filepath = self.folder_path+'/cluster_list.csv'
         with open(filepath) as csvfile:
@@ -355,6 +362,15 @@ class Structure:
         return
 
     def visualize_one_cluster_type_one_example(self, cluster_type, example_num, rep=''):
+        '''
+        function to visualize one example for a given cluster type
+        cluster type: has a format of 'a-b', a: number of sites in the cluster, b: the order of the cluster type by maximum site distances within clusters
+        example num: example number
+        rep: whether the structure configuration will be repeated beyond one super cell
+             default is an empty string, which will create both repeated and non-repeated configurations for visualization
+             'y': only create repeated configurations
+             'n': only create non-repeated configurations
+        '''
         if cluster_type.split('-')[0] == '0':
             return
         if cluster_type in self.cluster_types:
@@ -395,6 +411,14 @@ class Structure:
         return
 
     def visualize_one_cluster_type_all_examples(self, cluster_type, rep=''):
+        '''
+        function to visualize all the clusters within a super cell for a given cluster type
+        cluster type: has a format of 'a-b', a: number of sites in the cluster, b: the order of the cluster type by maximum site distances within clusters
+        rep: whether the structure configuration will be repeated beyond one super cell
+             default is an empty string, which will create both repeated and non-repeated configurations for visualization
+             'y': only create repeated configurations
+             'n': only create non-repeated configurations
+        '''
         if cluster_type.split('-')[0] == '0':
             return
         if cluster_type in self.cluster_types:
@@ -405,6 +429,14 @@ class Structure:
         return
 
     def visualize_all_cluster_types_nsite(self, nsite, rep=''):
+        '''
+        function to visualize all examples for clusters with n sites
+        nsite: number of sites in the cluster
+        rep: whether the structure configuration will be repeated beyond one super cell
+             default is an empty string, which will create both repeated and non-repeated configurations for visualization
+             'y': only create repeated configurations
+             'n': only create non-repeated configurations
+        '''
         if nsite == 0:
             return
         for k in range(1, self.cluster_type_numbers[nsite]+1):
@@ -413,6 +445,13 @@ class Structure:
         return
 
     def visualize_all_sites(self, rep=''):
+        '''
+        function to visualize all clusters for all cluster types within one supercell
+        rep: whether the structure configuration will be repeated beyond one super cell
+             default is an empty string, which will create both repeated and non-repeated configurations for visualization
+             'y': only create repeated configurations
+             'n': only create non-repeated configurations
+        '''
         if rep=='' or rep=='y':
             if not os.path.exists(self.folder_path+'/structure_clusters_rep/'):
                 os.makedirs(self.folder_path+'/structure_clusters_rep/')
@@ -489,6 +528,9 @@ class Structure:
     def count_clusters_one_site(self, site_df_index, str_vec, counting_types=[]):
         '''
         function to count clusters for one site based on the structure configuration
+        site_df_index: the site index in the dataframe
+        str_vec: the structure configurations
+        counting_types: the cluster types that we want to count, such as ['2-1', '2-2']
         '''
         #if counting types are not given, then count for every cluster type
         if counting_types==[]:
@@ -511,6 +553,9 @@ class Structure:
     def count_clusters_multi_configs(self, str_vecs, counting_types=[], excluding_types=[]):
         '''
         function to count clusters for a specific composition
+        str_vecs: the structure vectors(configurations)
+        counting_types: the cluster types to count, such as ['2-1', '2-2']
+        excluding_types: the cluster types to exclude while counting, such as ['2-3']
         '''
         counting_results = defaultdict(lambda: [])
         for str_vec in str_vecs:
@@ -522,6 +567,8 @@ class Structure:
     def cal_penalty_str_config(self, str_vec, penalty):
         '''
         function to calculate the penalty for a structure configuration
+        str_vec: structure vector(configuration)
+        penalty: the penalty dictionary with penalty factor for each penalized cluster type, such as {'2-1':10, '2-2': 10}
         '''
         if len(penalty.keys())==0:
             return 0
@@ -534,6 +581,10 @@ class Structure:
     def cal_penalty_difference(self, str_vec, selected_df_index, unselected_df_index, penalty):
         '''
         function to calculate the penalty difference for the swap between one selected site and one unselected site
+        str_vec: structure vector(configuration)
+        selected_df_index: the index in the dataframe for the selected site before swap
+        unselected_df_index: the index in the dataframe for the unselected site (the site potentially to be selected after swap)
+        penalty: the penalty dictionary with penalty factor for each penalized cluster type, such as {'2-1':10, '2-2': 10}
         '''
         if len(penalty.keys())==0:
             return 0
@@ -548,9 +599,17 @@ class Structure:
             total_delta_p += (count_results_unselected[cluster_type] - count_results_selected[cluster_type])*p
         return total_delta_p
 
-    def random_config_swap(self, atom_num, penalty={}, prob={}, num_vecs=1, num_step=100, vis=0, process=0, ptfile=''):
+    def random_config_swap(self, atom_num, penalty={}, prob={}, num_vecs=1, num_step=100, vis=0, process=0, ptfile=0):
         '''
         function to generate random structure configurations with Monte Carlo swap sites algorithm
+        atom_num: the number of the atoms at the second place in the atom types, if the atom types for the sites are 'Si, Al', then it's the number for Al
+        penalty: the penalty dictionary with penalty factor for each penalized cluster type, such as {'2-1':10, '2-2': 10}
+        prob: the probability for the second atom on each type of site, such as {'1-1':0.25, '1-2':0.25} meaning 1-1 and 1-2 site will have 25% of the second atoms and the other type of siteswill have the remainings
+        num_vecs: number of vectors to generate, default is 1
+        num_step: number of swaps before generating a structure vector, default is 100
+        vis: whether visualize the structure configurations; 0 means not and 1 means yes; default is 0
+        process: whether visualize the structure configurations in the swap process; 0 means not and 1 means yes; default is 0
+        ptfile: whether generate penalty and time files to monitor the swap process; 0 means not and 1 means yes; default is 0
         '''
         #remove previous configurations
         if vis:
@@ -643,6 +702,10 @@ class Structure:
     def random_config_select(self, atom_num, penalty, num_vecs=1, vis=0):
         '''
         function to generate random structure configurations by selecting site one by one and crossing out the penalty sites along the process
+        atom_num: the number of the atoms at the second place in the atom types, if the atom types for the sites are 'Si, Al', then it's the number for Al
+        penalty: the penalty dictionary with penalty factor for each penalized cluster type, such as {'2-1':10, '2-2': 10}
+        num_vecs: number of vectors to generate, default is 1
+        vis: whether visualize the structure configurations; 0 means not and 1 means yes; default is 0
         '''
         #remove previous configurations
         str_vecs = []
@@ -715,6 +778,9 @@ class Structure:
     def titrate_config_one_group(self, str_vec, titration_types=[], excluding_types=[]):
         '''
         function to titrate one group of clusters for one structure configuration
+        str_vec: structure vector(configuration)
+        titration_types: the cluster types to titrate
+        excluding_types: the cluster type to exclude while titrating
         '''
         if titration_types == []:
             titration_types = self.cluster_types
@@ -773,6 +839,11 @@ class Structure:
     def titrate_config_multi_groups(self, str_vec, titration_groups=[[]], excluding_types=[], titrate_num=1, hist=0):
         '''
         function to titrate consecutively multiple group of clusters for one structure configuration
+        str_vec: structure vector(configuration)
+        titration_groups: the cluster types grouped by titration priority, for example: [['2-1','2-2'],['2-3']] means first titrate 2-1 and 2-2 clusters until no 2-1 and 2-2 clusters remaining, then start to titrate 2-3 clusters.
+        excluding_types: the cluster type to exclude while titrating
+        titration_num: the number of titrations for each configuration
+        hist: whether keep all the titration values for each titration or keep the mean value; 0 means only keep mean value and 1 means keep all values; default=0
         '''
         cluster_types=reduce(lambda x,y: x+y,titration_groups)
         titration_results = defaultdict(lambda: [])
@@ -793,6 +864,11 @@ class Structure:
     def titrate_clusters_multi_configs(self, str_vecs, titration_groups=[[]], excluding_types=[], titrate_num=1, hist=0):
         '''
         function to titrate clusters for a specific composition
+        str_vecs: structure vectors(configurations)
+        titration_groups: the cluster types grouped by titration priority, for example: [['2-1','2-2'],['2-3']] means first titrate 2-1 and 2-2 clusters until no 2-1 and 2-2 clusters remaining, then start to titrate 2-3 clusters.
+        excluding_types: the cluster type to exclude while titrating
+        titration_num: the number of titrations for each configuration
+        hist: whether keep all the titration values for each titration or keep the mean value; 0 means only keep mean value and 1 means keep all values; default=0
         '''
         cluster_types=reduce(lambda x,y: x+y,titration_groups)
         titration_results = defaultdict(lambda: [])
@@ -801,14 +877,3 @@ class Structure:
             for cluster_type in cluster_types:
                 titration_results[cluster_type].append(result[cluster_type])
         return dict(titration_results)
-
-    def titrate_clusters_multi_configs_titrate_hist(self, str_vecs, titration_groups=[[]], excluding_types=[], titrate_num=1):
-        '''
-        function to titrate clusters for a specific composition
-        '''
-        titration_results = defaultdict(lambda: [])
-        for str_vec in str_vecs:
-            result = self.titrate_config_multi_groups(str_vec, titration_groups=titration_groups, excluding_types=excluding_types, titrate_num=titrate_num)
-            for cluster_type in self.cluster_types:
-                titration_results[cluster_type].append(result[cluster_type])
-        return titration_results
