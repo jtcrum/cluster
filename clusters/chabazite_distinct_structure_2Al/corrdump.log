@@ -1,0 +1,41 @@
+strain=
+1.00000 0.00000 0.00000 
+0.00000 1.00000 0.00000 
+0.00000 0.00000 1.00000 
+
+Si atom at 0.66697 0.10693 0.22823 mapped onto lattice site at 0.66697 0.10693 0.22823 distance= 0.00000
+Si atom at 0.89307 0.56003 0.22823 mapped onto lattice site at 0.89307 0.56003 0.22823 distance= 0.00000
+Si atom at 0.66637 0.10663 0.43843 mapped onto lattice site at 0.66637 0.10663 0.43843 distance= 0.00000
+Si atom at 0.33363 0.44027 0.56157 mapped onto lattice site at 0.33363 0.44027 0.56157 distance= 0.00000
+Si atom at 0.22640 0.22670 0.89490 mapped onto lattice site at 0.22640 0.22670 0.89490 distance= 0.00000
+Si atom at 0.77360 1.00030 0.10510 mapped onto lattice site at 0.77360 1.00030 0.10510 distance= 0.00000
+Si atom at 0.44027 0.33363 0.43843 mapped onto lattice site at 0.44027 0.33363 0.43843 distance= 0.00000
+Si atom at 0.77360 0.77330 0.10510 mapped onto lattice site at 0.77360 0.77330 0.10510 distance= 0.00000
+Si atom at 0.77330 0.99970 0.89490 mapped onto lattice site at 0.77330 0.99970 0.89490 distance= 0.00000
+Si atom at 0.99970 0.22640 0.10510 mapped onto lattice site at 0.99970 0.22640 0.10510 distance= 0.00000
+Si atom at 0.77330 0.77360 0.89490 mapped onto lattice site at 0.77330 0.77360 0.89490 distance= 0.00000
+Si atom at 0.22670 0.22640 0.10510 mapped onto lattice site at 0.22670 0.22640 0.10510 distance= 0.00000
+Si atom at 0.66697 0.56003 0.22823 mapped onto lattice site at 0.66697 0.56003 0.22823 distance= 0.00000
+Si atom at 0.43997 0.33303 0.22823 mapped onto lattice site at 0.43997 0.33303 0.22823 distance= 0.00000
+Si atom at 0.33303 0.43997 0.77177 mapped onto lattice site at 0.33303 0.43997 0.77177 distance= 0.00000
+Si atom at 0.99970 0.77330 0.10510 mapped onto lattice site at 0.99970 0.77330 0.10510 distance= 0.00000
+Si atom at 1.00030 0.22670 0.89490 mapped onto lattice site at 1.00030 0.22670 0.89490 distance= 0.00000
+Si atom at 0.33303 0.89307 0.77177 mapped onto lattice site at 0.33303 0.89307 0.77177 distance= 0.00000
+Si atom at 0.22640 0.99970 0.89490 mapped onto lattice site at 0.22640 0.99970 0.89490 distance= 0.00000
+Si atom at 0.89307 0.33303 0.22823 mapped onto lattice site at 0.89307 0.33303 0.22823 distance= 0.00000
+Si atom at 0.55973 0.66637 0.56157 mapped onto lattice site at 0.55973 0.66637 0.56157 distance= 0.00000
+Si atom at 0.66637 0.55973 0.43843 mapped onto lattice site at 0.66637 0.55973 0.43843 distance= 0.00000
+Si atom at 0.10693 0.66697 0.77177 mapped onto lattice site at 0.10693 0.66697 0.77177 distance= 0.00000
+Si atom at 0.44027 0.10663 0.43843 mapped onto lattice site at 0.44027 0.10663 0.43843 distance= 0.00000
+Si atom at 0.10693 0.43997 0.77177 mapped onto lattice site at 0.10693 0.43997 0.77177 distance= 0.00000
+Si atom at 0.10663 0.66637 0.56157 mapped onto lattice site at 0.10663 0.66637 0.56157 distance= 0.00000
+Si atom at 0.43997 0.10693 0.22823 mapped onto lattice site at 0.43997 0.10693 0.22823 distance= 0.00000
+Si atom at 0.10663 0.44027 0.56157 mapped onto lattice site at 0.10663 0.44027 0.56157 distance= 0.00000
+Si atom at 0.22670 1.00030 0.10510 mapped onto lattice site at 0.22670 1.00030 0.10510 distance= 0.00000
+Si atom at 0.89337 0.33363 0.43843 mapped onto lattice site at 0.89337 0.33363 0.43843 distance= 0.00000
+Si atom at 0.56003 0.66697 0.77177 mapped onto lattice site at 0.56003 0.66697 0.77177 distance= 0.00000
+Si atom at 0.89337 0.55973 0.43843 mapped onto lattice site at 0.89337 0.55973 0.43843 distance= 0.00000
+Si atom at 0.56003 0.89307 0.77177 mapped onto lattice site at 0.56003 0.89307 0.77177 distance= 0.00000
+Si atom at 0.33363 0.89337 0.56157 mapped onto lattice site at 0.33363 0.89337 0.56157 distance= 0.00000
+Si atom at 0.55973 0.89337 0.56157 mapped onto lattice site at 0.55973 0.89337 0.56157 distance= 0.00000
+Si atom at 1.00030 0.77360 0.89490 mapped onto lattice site at 1.00030 0.77360 0.89490 distance= 0.00000
